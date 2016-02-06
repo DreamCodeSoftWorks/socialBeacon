@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 
-class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
+class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
     
     @IBOutlet var chirpLabel: UILabel!
     @IBOutlet var RecordBTN: UIButton!
@@ -70,7 +70,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
     
     func startRecording() {
         
-        let audioURL = ViewController.getFileURL()
+        let audioURL = RecordViewController.getFileURL()
         print(audioURL.absoluteString)
         
         let settings = [

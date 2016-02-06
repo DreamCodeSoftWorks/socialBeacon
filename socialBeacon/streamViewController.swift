@@ -17,7 +17,7 @@ public var SelectedSongNumber = Int()
 class streamViewController: UIViewController {
     
     var streamTitle: String?
-    var channelSounds: [PFObject]?
+    var channelSounds: [PFObject] = []
 
     @IBAction func playButton(sender: AnyObject) {
         //ParseInterface.playChannelSounds(channelSounds!)
@@ -29,7 +29,7 @@ class streamViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = streamTitle
-        ParseInterface.downloadChannelSounds(streamTitle!, channelSounds: channelSounds!)
+        ParseInterface.downloadChannelSounds(streamTitle!, channelSounds: channelSounds)
     }
 
     override func didReceiveMemoryWarning() {
