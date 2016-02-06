@@ -24,8 +24,10 @@ class ParseInterface {
     }
 
     static func uploadParseSound(channelName : String, recordingName : String) {
-        let soundPath = NSBundle.mainBundle().pathForResource(recordingName, ofType: nil)
-        let soundParseFile = PFFile(name: "song.mp3", data: NSData(contentsOfURL: NSURL(fileURLWithPath: soundPath!))!)
+        print("Uploading sound \(recordingName) for channel \(channelName)")
+        let soundPath = RecordViewController.getFileURL()
+        print(soundPath)
+        let soundParseFile = PFFile(name: recordingName, data: NSData(contentsOfURL:soundPath)!)
         let soundParseObj = PFObject(className: "channelSound")
         soundParseObj["channelName"] = channelName
         soundParseObj["sound"] = soundParseFile
@@ -37,13 +39,14 @@ class ParseInterface {
             }
         }
     }
-    static func downloadChannelSounds(channelName : String, var channelSounds : [PFObject]) {
+    static func downloadChannelSounds(channelName : String, streamView : streamViewController) {
         let query = PFQuery(className: "channelSound")
         query.whereKey("channelName", equalTo: channelName)
         query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
             if error == nil {
+                print("Found \(objects!.count) snippets")
                 for object in objects! {
-                    channelSounds.append(object)
+                    streamView.channelSounds.append(object)
                 }
             } else {
                 NSLog("Error, couldn't load sounds")
@@ -52,9 +55,11 @@ class ParseInterface {
     }
     
     static func playChannelSounds(channelSoundObjs: [PFObject]) {
+        print("Playing sounds \(channelSoundObjs.count)")
         for channelSoundObject in channelSoundObjs {
             if let channelSoundFile = channelSoundObject["sound"] as? PFFile {
                 if let soundURL = NSURL(string: channelSoundFile.url!) {
+                    print("Sound at \(soundURL)")
                     let soundItem = AVPlayerItem(URL: soundURL)
                     let audioPlayer = AVPlayer(playerItem: soundItem)
                     audioPlayer.play()

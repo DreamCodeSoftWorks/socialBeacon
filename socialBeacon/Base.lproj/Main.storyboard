@@ -196,6 +196,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fxs-l8-D23">
                                 <rect key="frame" x="276" y="202" width="49" height="30"/>
                                 <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="Record:" destination="ZeE-wx-Tcs" eventType="touchUpInside" id="DPt-cn-WGK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ct8-gG-rBA">
                                 <rect key="frame" x="269" y="259" width="62" height="30"/>
@@ -222,7 +225,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="RecordBTN" destination="Fxs-l8-D23" id="Sp4-sX-lo1"/>
+                        <outlet property="RecordBTN" destination="Fxs-l8-D23" id="1od-Bz-R4h"/>
                         <outlet property="chirpLabel" destination="dcR-SO-sux" id="PR7-kA-csf"/>
                     </connections>
                 </viewController>

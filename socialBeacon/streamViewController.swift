@@ -21,8 +21,6 @@ class streamViewController: UIViewController {
 
     @IBAction func playButton(sender: AnyObject) {
         ParseInterface.playChannelSounds(channelSounds)
-        print(streamTitle)
-        print(channelSounds == [])
 
     }
     @IBAction func recordButton(sender: AnyObject) {
@@ -31,7 +29,7 @@ class streamViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = streamTitle
-        ParseInterface.downloadChannelSounds(streamTitle!, channelSounds: channelSounds)
+        ParseInterface.downloadChannelSounds(streamTitle!, streamView: self)
     }
 
     override func didReceiveMemoryWarning() {

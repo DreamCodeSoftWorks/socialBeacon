@@ -17,8 +17,6 @@ class ChannelTableViewController: UITableViewController {
         super.viewDidLoad()
         
         channelArray = ["Super Bowl 50", "Democratic Debate", "Party Channel", "Local Channel"]
-        
-        
         tableView.reloadData()
     }
 

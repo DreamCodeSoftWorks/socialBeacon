@@ -98,6 +98,7 @@ class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         if success {
             chirpLabel.text = "Chirped"
             RecordBTN.setTitle("Tap to Re-record", forState: .Normal)
+            ParseInterface.uploadParseSound("Party Channel", recordingName: "chirp.m4a")
         } else {
             RecordBTN.setTitle("Tap to Record", forState: .Normal)
         }
