@@ -17,6 +17,7 @@ class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
     
     var recordingSession: AVAudioSession!
     var chirpRecorder: AVAudioRecorder!
+    var chirpPlayer: AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,14 +86,14 @@ class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         do {
             chirpRecorder = try AVAudioRecorder(URL: audioURL, settings: settings)
             chirpRecorder.delegate = self
-            chirpRecorder.record()
+            chirpRecorder.recordForDuration(6.0)
         } catch {
             finishRecording(success: false)
         }
     }
     
     func finishRecording(success success: Bool) {
-        chirpRecorder.stop()
+        
         chirpRecorder = nil
         
         if success {
@@ -104,17 +105,21 @@ class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         }
     }
     
-    func RecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
+    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
         if !flag {
             finishRecording(success: false)
+        } else {
+            finishRecording(success: true)
         }
     }
 
+    
+    
     @IBAction func Record(sender: UIButton) {
         if chirpRecorder == nil {
             startRecording()
         } else {
-            finishRecording(success: true)
+            chirpRecorder.stop()
         }
     }
 }
