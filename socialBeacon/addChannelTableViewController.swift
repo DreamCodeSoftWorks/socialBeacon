@@ -11,8 +11,7 @@ import UIKit
 class AddChannelTableViewController: UITableViewController {
     
     var selected = 0
-    var twitterTrendsArray : [String]?
-    var selectedTwitterTrend : String?
+    var twitterTrendsArray = ["#NBAFinals", "#BlackLivesMatter", "#TPPNotCool", "#ImWithStupid"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,30 +27,31 @@ class AddChannelTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("channelCell") as UITableViewCell!
         //Change to implement twitter hashtag names
-        //cell.textLabel?.text = channelArray[indexPath.row]
+        cell.textLabel?.text = twitterTrendsArray[indexPath.row]
         return cell
         
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //Determines how many cells in a tableViewController
-        //return channelArray.count
-        return 0
+        return twitterTrendsArray.count
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         selected = indexPath.row
-        performSegueWithIdentifier("addChannelSegue", sender: nil)
+        performSegueWithIdentifier("addChannelUnwind", sender: nil)
     }
     
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "addChannelSegue" {
-            if let dest = segue.destinationViewController as? streamViewController {
-                dest.streamTitle = twitterTrendsArray![selected]
+        if segue.identifier == "addChannelUnwind" {
+            if let dest = segue.destinationViewController as? ChannelTableViewController {
+                //dest.selectedTwitterTrend = twitterTrendsArray![selected]
+                dest.channelArray.append(twitterTrendsArray[selected])
             }
         }
+        
     }
     
 }

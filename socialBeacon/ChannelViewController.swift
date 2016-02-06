@@ -20,6 +20,12 @@ class ChannelTableViewController: UITableViewController {
         channelArray = ["Super Bowl 50", "Democratic Debate", "Party Channel", "Local Channel"]
         tableView.reloadData()
     }
+    
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        tableView.reloadData()
+    }
 
     
     override func didReceiveMemoryWarning() {
@@ -51,14 +57,11 @@ class ChannelTableViewController: UITableViewController {
             if let dest = segue.destinationViewController as? streamViewController {
                 dest.streamTitle = channelArray[selected]
             }
-            
-            if segue.identifier == "addChannelSegue" {
-                let addChannelController = segue.destinationViewController as!AddChannelTableViewController
-                selectedTwitterTrend = addChannelController.selectedTwitterTrend
-                channelArray.append(selectedTwitterTrend!)
-                tableView.reloadData()
-            }
         }
+    }
+    
+    @IBAction func unwindFromAddChannel(segue: UIStoryboardSegue) {
+        print("unwinding...")
     }
 
 }

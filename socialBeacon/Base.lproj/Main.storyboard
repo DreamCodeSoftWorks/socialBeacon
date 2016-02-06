@@ -109,9 +109,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="ZOv-zh-tbw">
-                        <barButtonItem key="rightBarButtonItem" title="Add Channel" id="bTt-bx-Eol">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bTt-bx-Eol">
                             <connections>
-                                <segue destination="K5z-YH-ib1" kind="show" identifier="addChannelSegue" id="RXq-ZO-xFw"/>
+                                <segue destination="K5z-YH-ib1" kind="show" identifier="addChannelSegue" id="6hI-AJ-eTQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -126,7 +126,6 @@
         <!--Add Channel Table View Controller-->
         <scene sceneID="89G-94-Jde">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Drl-Fa-gdz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="K5z-YH-ib1" customClass="AddChannelTableViewController" customModule="socialBeacon" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="lrn-rY-zUd">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -147,9 +146,14 @@
                             <outlet property="delegate" destination="K5z-YH-ib1" id="eyk-Vw-6Tc"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="rVm-0T-h2x" kind="unwind" identifier="addChannelUnwind" unwindAction="unwindFromAddChannel:" id="jf1-B6-l6O"/>
+                    </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Drl-Fa-gdz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="rVm-0T-h2x" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3199" y="-34"/>
+            <point key="canvasLocation" x="3204" y="294"/>
         </scene>
         <!--Stream View Controller-->
         <scene sceneID="fAl-pU-MbK">
