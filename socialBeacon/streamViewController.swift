@@ -25,7 +25,7 @@ class streamViewController: UIViewController {
 
     }
     @IBAction func recordButton(sender: AnyObject) {
-        
+        parseInt.stopChannelSounds()
     }
 
     required init(coder decoder: NSCoder) {
@@ -43,4 +43,14 @@ class streamViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "recordSegue" {
+            if let dest = segue.destinationViewController as? RecordViewController {
+                dest.streamTitle = streamTitle
+            }
+        }
+    }
+    
 }

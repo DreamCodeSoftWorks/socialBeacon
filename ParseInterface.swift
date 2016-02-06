@@ -12,6 +12,7 @@ import AVFoundation
 class ParseInterface {
     var audioPlayer = AVQueuePlayer()
 
+    // Upload a channel to parse, with the given name
     func uploadParseChannel(channelName : String) {
         let channelParseObj = PFObject(className: channelName)
         channelParseObj["name"] = channelName
@@ -23,7 +24,8 @@ class ParseInterface {
             }
         }
     }
-
+    
+    // Upload the recording to the Parse Server under the given channel
     static func uploadParseSound(channelName : String, recordingName : String) {
         print("Uploading sound \(recordingName) for channel \(channelName)")
         let soundPath = RecordViewController.getFileURL()
@@ -41,9 +43,9 @@ class ParseInterface {
         }
     }
     
+    // Downloads the sound clips to the app
     func downloadChannelSounds(channelName : String, streamView : streamViewController) {
         let query = PFQuery(className: "channelSound")
-        var soundItems = [AVPlayerItem]()
         query.whereKey("channelName", equalTo: channelName)
         query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
             if error == nil {
@@ -53,33 +55,38 @@ class ParseInterface {
                         if let soundURL = NSURL(string: channelSoundFile.url!) {
                             print(soundURL)
                             streamView.channelSounds.append(object)
-                            let soundItem = AVPlayerItem(URL: soundURL)
-                            soundItems.append(soundItem)
+
                         }
                     }
                 }
             } else {
                 NSLog("Error, couldn't load sounds")
             }
-            print("Playing sounds")
-            self.audioPlayer = AVQueuePlayer(items: soundItems)
-            self.audioPlayer.play()
         }
  
     }
     
+    // Iterate through the sound clips, play them with the AVQueuePlayer
     func playChannelSounds(channelSoundObjs: [PFObject]) {
         print("Playing sounds \(channelSoundObjs.count)")
-        
+        var soundItems = [AVPlayerItem]()
+
         for channelSoundObject in channelSoundObjs {
             if let channelSoundFile = channelSoundObject["sound"] as? PFFile {
                 if let soundURL = NSURL(string: channelSoundFile.url!) {
                     print("Sound at \(soundURL)")
                     let soundItem = AVPlayerItem(URL: soundURL)
-                    //audioPlayer = AVPlayer(playerItem: soundItem)
-                    //audioPlayer.play()
+                    soundItems.append(soundItem)
                 }
             }
+            print("Playing sounds")
+            self.audioPlayer = AVQueuePlayer(items: soundItems)
+            self.audioPlayer.play()
         }
+    }
+    
+    // Stop the channel from playing
+    func stopChannelSounds() {
+        self.audioPlayer.pause()
     }
 }
