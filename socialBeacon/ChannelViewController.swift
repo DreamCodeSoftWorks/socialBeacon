@@ -48,7 +48,7 @@ class ChannelTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "channelSegue" {
-            if let dest = segue.destinationViewController as? StreamViewController {
+            if let dest = segue.destinationViewController as? streamViewController {
                 dest.streamTitle = channelArray[selected]
             }
         }
