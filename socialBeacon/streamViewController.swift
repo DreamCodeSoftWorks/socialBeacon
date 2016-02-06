@@ -20,7 +20,9 @@ class streamViewController: UIViewController {
     var channelSounds: [PFObject] = []
 
     @IBAction func playButton(sender: AnyObject) {
-        //ParseInterface.playChannelSounds(channelSounds!)
+        ParseInterface.playChannelSounds(channelSounds)
+        print(streamTitle)
+        print(channelSounds == [])
 
     }
     @IBAction func recordButton(sender: AnyObject) {
