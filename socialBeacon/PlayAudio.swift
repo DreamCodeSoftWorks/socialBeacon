@@ -19,6 +19,9 @@ class PlayAudio {
         let path: String = NSBundle.mainBundle().pathForResource(fileName, ofType: type)!
         let url: NSURL = NSURL(fileURLWithPath: path)
         
+        if (audioPlayer != nil && audioPlayer.playing) {
+            audioPlayer.pause()
+        }
         do {
             let sound = try AVAudioPlayer(contentsOfURL: url)
             audioPlayer = sound
@@ -26,6 +29,7 @@ class PlayAudio {
         } catch {
             // Could not load the file
             print("Could not load")
+            audioPlayer = nil
             throw AudioError.FileNotFound
         }
     }
