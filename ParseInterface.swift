@@ -10,6 +10,7 @@ import Parse
 import AVFoundation
 
 class ParseInterface {
+    var audioPlayer = AVQueuePlayer()
 
     func uploadParseChannel(channelName : String) {
         let channelParseObj = PFObject(className: channelName)
@@ -39,37 +40,46 @@ class ParseInterface {
             }
         }
     }
-    static func downloadChannelSounds(channelName : String, streamView : streamViewController) {
+    
+    func downloadChannelSounds(channelName : String, streamView : streamViewController) {
         let query = PFQuery(className: "channelSound")
+        var soundItems = [AVPlayerItem]()
         query.whereKey("channelName", equalTo: channelName)
         query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
             if error == nil {
-                print("Found \(objects!.count) snippets")
+                print("Found \(objects!.count) snippets for \(channelName)")
                 for object in objects! {
-                    streamView.channelSounds.append(object)
+                    if let channelSoundFile = object["sound"] as? PFFile {
+                        if let soundURL = NSURL(string: channelSoundFile.url!) {
+                            print(soundURL)
+                            streamView.channelSounds.append(object)
+                            let soundItem = AVPlayerItem(URL: soundURL)
+                            soundItems.append(soundItem)
+                        }
+                    }
                 }
             } else {
                 NSLog("Error, couldn't load sounds")
             }
+            print("Playing sounds")
+            self.audioPlayer = AVQueuePlayer(items: soundItems)
+            self.audioPlayer.play()
         }
+ 
     }
     
-    static func playChannelSounds(channelSoundObjs: [PFObject]) {
+    func playChannelSounds(channelSoundObjs: [PFObject]) {
         print("Playing sounds \(channelSoundObjs.count)")
-        let url = NSURL(string: "https://files.parsetfss.com/95d6bbb4-ff13-4668-ae8e-27300694cf81/tfss-d3ba6911-ca8b-493d-a321-6f424dbb99b7-1-01%20Waiting%20On%20The%20World%20To%20Change.mp3")
-        let playerItem = AVPlayerItem(URL: url!)
-        let player = AVPlayer(playerItem: playerItem)
-        player.play()
         
-        /*for channelSoundObject in channelSoundObjs {
+        for channelSoundObject in channelSoundObjs {
             if let channelSoundFile = channelSoundObject["sound"] as? PFFile {
                 if let soundURL = NSURL(string: channelSoundFile.url!) {
                     print("Sound at \(soundURL)")
                     let soundItem = AVPlayerItem(URL: soundURL)
-                    let audioPlayer = AVPlayer(playerItem: soundItem)
-                    audioPlayer.play()
+                    //audioPlayer = AVPlayer(playerItem: soundItem)
+                    //audioPlayer.play()
                 }
             }
-        }*/
+        }
     }
 }
