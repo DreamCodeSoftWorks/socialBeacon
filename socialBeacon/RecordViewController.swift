@@ -14,10 +14,14 @@ class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
     
     @IBOutlet var chirpLabel: UILabel!
     @IBOutlet var RecordBTN: UIButton!
+    @IBOutlet var PlaybackBTN: UIButton!
+    @IBOutlet var ProgressBar: UIProgressView!
     
     var recordingSession: AVAudioSession!
     var chirpRecorder: AVAudioRecorder!
     var chirpPlayer: AVAudioPlayer!
+    
+    let audioURL = RecordViewController.getFileURL()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,7 +75,6 @@ class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
     
     func startRecording() {
         
-        let audioURL = RecordViewController.getFileURL()
         print(audioURL.absoluteString)
         
         let settings = [
@@ -113,13 +116,45 @@ class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         }
     }
 
+    func startPlayback() {
+        do {
+            chirpPlayer = try AVAudioPlayer(contentsOfURL: audioURL)
+            chirpPlayer.delegate = self
+            chirpPlayer.volume = 1.0
+            chirpPlayer.play()
+        } catch {
+            finishPlayback(success: false)
+        }
+    }
     
+    func finishPlayback(success success: Bool) {
+        chirpPlayer = nil
+        if success {
+            PlaybackBTN.setTitle("Playback", forState: .Normal)
+        } else {
+            
+        }
+    }
+    
+    func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
+        if !flag {
+            finishPlayback(success: false)
+        } else {
+            finishPlayback(success: true)
+        }
+    }
     
     @IBAction func Record(sender: UIButton) {
         if chirpRecorder == nil {
             startRecording()
         } else {
             chirpRecorder.stop()
+        }
+    }
+    
+    @IBAction func Playback(sender: UIButton) {
+        if chirpPlayer == nil {
+            startPlayback()
         }
     }
 }

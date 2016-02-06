@@ -203,6 +203,9 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ct8-gG-rBA">
                                 <rect key="frame" x="269" y="348" width="62" height="30"/>
                                 <state key="normal" title="Playback"/>
+                                <connections>
+                                    <action selector="Playback:" destination="ZeE-wx-Tcs" eventType="touchUpInside" id="lb3-NF-pp7"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcR-SO-sux">
                                 <rect key="frame" x="279" y="211" width="42" height="21"/>
@@ -213,6 +216,12 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xHF-M4-U0t">
+                                <rect key="frame" x="225" y="267" width="150" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="qLF-9T-2yI"/>
+                                </constraints>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -222,9 +231,15 @@
                             <constraint firstItem="Fxs-l8-D23" firstAttribute="top" secondItem="dcR-SO-sux" secondAttribute="bottom" constant="48" id="Jjz-73-xgg"/>
                             <constraint firstItem="dcR-SO-sux" firstAttribute="centerX" secondItem="EtP-gO-hfn" secondAttribute="centerX" id="R4E-TE-IFN"/>
                             <constraint firstItem="dcR-SO-sux" firstAttribute="top" secondItem="aC2-yD-htd" secondAttribute="bottom" constant="69" id="ROD-gq-jtY"/>
+                            <constraint firstItem="xHF-M4-U0t" firstAttribute="centerX" secondItem="dcR-SO-sux" secondAttribute="centerX" id="VJI-mM-hbo"/>
+                            <constraint firstItem="Fxs-l8-D23" firstAttribute="top" secondItem="xHF-M4-U0t" secondAttribute="bottom" constant="28" id="cgK-6r-hKP"/>
+                            <constraint firstItem="xHF-M4-U0t" firstAttribute="top" secondItem="dcR-SO-sux" secondAttribute="bottom" constant="35" id="wBO-rE-sGY"/>
+                            <constraint firstItem="xHF-M4-U0t" firstAttribute="top" secondItem="EtP-gO-hfn" secondAttribute="top" constant="267" id="zNr-Hh-gaF"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="PlaybackBTN" destination="Ct8-gG-rBA" id="gdK-bn-4C7"/>
+                        <outlet property="ProgressBar" destination="EtP-gO-hfn" id="LGv-Fp-e7T"/>
                         <outlet property="RecordBTN" destination="Fxs-l8-D23" id="1od-Bz-R4h"/>
                         <outlet property="chirpLabel" destination="dcR-SO-sux" id="PR7-kA-csf"/>
                     </connections>
