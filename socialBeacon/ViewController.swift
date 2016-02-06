@@ -94,6 +94,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
         chirpRecorder = nil
         
         if success {
+            chirpLabel.text = "Chirped"
             RecordBTN.setTitle("Tap to Re-record", forState: .Normal)
         } else {
             RecordBTN.setTitle("Tap to Record", forState: .Normal)
