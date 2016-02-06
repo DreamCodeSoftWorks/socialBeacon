@@ -7,9 +7,9 @@
 //
 
 import UIKit
+import Parse
 import AVFoundation
 import AVKit
-import Parse
 
 public var AudioPlayer = AVPlayer()
 public var SelectedSongNumber = Int()
