@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ChannelViewController.swift
 //  socialBeacon
 //
 //  Created by Omar Skalli on 2/6/16.
@@ -8,9 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ChannelTableViewController: UITableViewController {
+    
+    var channelArray = ["Super Bowl 50", "Democratic Debate", "Party Channel", "Local Channel"]
 
-    @IBOutlet weak var loginButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,7 +23,20 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+       let cell = tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell!
+        cell.textLabel?.text = channelArray[indexPath.row]
+        
+        return cell
+        
+    }
 
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+         return channelArray.count
+    }
+    
+
+    
     /*
     // MARK: - Navigation
 

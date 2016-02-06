@@ -13,11 +13,9 @@
 		C01734BD1C658DE300FF505B /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01734B71C658DE300FF505B /* ParseFacebookUtilsV4.framework */; };
 		C01734BE1C658DE300FF505B /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01734B81C658DE300FF505B /* ParseTwitterUtils.framework */; };
 		C01734BF1C658DE300FF505B /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01734B91C658DE300FF505B /* ParseUI.framework */; };
-		C01734C91C65AED000FF505B /* channelViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01734C81C65AED000FF505B /* channelViewCell.swift */; };
-		C01734CB1C65AEFF00FF505B /* channelTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01734CA1C65AEFF00FF505B /* channelTableView.swift */; };
-		C01734CD1C65AF1C00FF505B /* channelStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01734CC1C65AF1C00FF505B /* channelStreamView.swift */; };
+		C0F6D2B21C65BE73005BBA29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F6D2B11C65BE73005BBA29 /* ViewController.swift */; };
+		C0F6D2B61C65C143005BBA29 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F6D2B51C65C143005BBA29 /* ChannelViewController.swift */; };
 		D27748111C6587F50085F36F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27748101C6587F50085F36F /* AppDelegate.swift */; };
-		D27748131C6587F50085F36F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27748121C6587F50085F36F /* ViewController.swift */; };
 		D27748161C6587F50085F36F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D27748141C6587F50085F36F /* Main.storyboard */; };
 		D27748181C6587F50085F36F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D27748171C6587F50085F36F /* Assets.xcassets */; };
 		D277481B1C6587F50085F36F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D27748191C6587F50085F36F /* LaunchScreen.storyboard */; };
@@ -59,12 +57,10 @@
 		C01734B71C658DE300FF505B /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = /Volumes/Sandbox/socialBeacon/socialBeacon/ParseFacebookUtilsV4.framework; sourceTree = "<absolute>"; };
 		C01734B81C658DE300FF505B /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseTwitterUtils.framework; path = /Volumes/Sandbox/socialBeacon/socialBeacon/ParseTwitterUtils.framework; sourceTree = "<absolute>"; };
 		C01734B91C658DE300FF505B /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = /Volumes/Sandbox/socialBeacon/socialBeacon/ParseUI.framework; sourceTree = "<absolute>"; };
-		C01734C81C65AED000FF505B /* channelViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = channelViewCell.swift; path = ../channelViewCell.swift; sourceTree = "<group>"; };
-		C01734CA1C65AEFF00FF505B /* channelTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = channelTableView.swift; path = ../channelTableView.swift; sourceTree = "<group>"; };
-		C01734CC1C65AF1C00FF505B /* channelStreamView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = channelStreamView.swift; sourceTree = "<group>"; };
+		C0F6D2B11C65BE73005BBA29 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C0F6D2B51C65C143005BBA29 /* ChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		D277480D1C6587F50085F36F /* socialBeacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = socialBeacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D27748101C6587F50085F36F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D27748121C6587F50085F36F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D27748151C6587F50085F36F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D27748171C6587F50085F36F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D277481A1C6587F50085F36F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -167,12 +163,10 @@
 		D277480F1C6587F50085F36F /* socialBeacon */ = {
 			isa = PBXGroup;
 			children = (
-				C01734CA1C65AEFF00FF505B /* channelTableView.swift */,
-				C01734C81C65AED000FF505B /* channelViewCell.swift */,
-				C01734CC1C65AF1C00FF505B /* channelStreamView.swift */,
 				D27748101C6587F50085F36F /* AppDelegate.swift */,
-				D27748121C6587F50085F36F /* ViewController.swift */,
+				C0F6D2B11C65BE73005BBA29 /* ViewController.swift */,
 				D27748141C6587F50085F36F /* Main.storyboard */,
+				C0F6D2B51C65C143005BBA29 /* ChannelViewController.swift */,
 				D27748171C6587F50085F36F /* Assets.xcassets */,
 				D27748191C6587F50085F36F /* LaunchScreen.storyboard */,
 				D277481C1C6587F50085F36F /* Info.plist */,
@@ -332,10 +326,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C01734C91C65AED000FF505B /* channelViewCell.swift in Sources */,
-				D27748131C6587F50085F36F /* ViewController.swift in Sources */,
-				C01734CB1C65AEFF00FF505B /* channelTableView.swift in Sources */,
-				C01734CD1C65AF1C00FF505B /* channelStreamView.swift in Sources */,
+				C0F6D2B21C65BE73005BBA29 /* ViewController.swift in Sources */,
+				C0F6D2B61C65C143005BBA29 /* ChannelViewController.swift in Sources */,
 				D27748111C6587F50085F36F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class channelTableView : UIViewController {
+class viewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
