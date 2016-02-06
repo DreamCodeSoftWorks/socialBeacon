@@ -15,21 +15,28 @@ public var AudioPlayer = AVPlayer()
 public var SelectedSongNumber = Int()
 
 class streamViewController: UIViewController {
-    
+
+    var parseInt : ParseInterface
     var streamTitle: String?
     var channelSounds: [PFObject] = []
 
     @IBAction func playButton(sender: AnyObject) {
-        ParseInterface.playChannelSounds(channelSounds)
+        parseInt.playChannelSounds(channelSounds)
 
     }
     @IBAction func recordButton(sender: AnyObject) {
         
     }
+
+    required init(coder decoder: NSCoder) {
+        parseInt = ParseInterface()
+        super.init(coder: decoder)!
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = streamTitle
-        ParseInterface.downloadChannelSounds(streamTitle!, streamView: self)
+        parseInt.downloadChannelSounds(streamTitle!, streamView: self)
     }
 
     override func didReceiveMemoryWarning() {
