@@ -7,21 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C0F6D2B21C65BE73005BBA29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F6D2B11C65BE73005BBA29 /* ViewController.swift */; };
+		C0F6D2B21C65BE73005BBA29 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F6D2B11C65BE73005BBA29 /* RecordViewController.swift */; };
 		C0F6D2B61C65C143005BBA29 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F6D2B51C65C143005BBA29 /* ChannelViewController.swift */; };
 		C0F6D2BA1C65CDB3005BBA29 /* streamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F6D2B91C65CDB3005BBA29 /* streamViewController.swift */; };
 		C0F6D2C91C65DDBD005BBA29 /* photo-1433838552652-f9a46b332c40.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C0F6D2C71C65DDBD005BBA29 /* photo-1433838552652-f9a46b332c40.jpg */; };
 		C0F6D2CA1C65DDBD005BBA29 /* photo-1444703686981-a3abbc4d4fe3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C0F6D2C81C65DDBD005BBA29 /* photo-1444703686981-a3abbc4d4fe3.jpg */; };
 		C0F6D3011C65F13F005BBA29 /* ParseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F6D3001C65F13F005BBA29 /* ParseInterface.swift */; };
-		C0F6D3081C65F269005BBA29 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F6D3021C65F269005BBA29 /* Bolts.framework */; };
-		C0F6D3091C65F269005BBA29 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F6D3031C65F269005BBA29 /* Parse.framework */; };
-		C0F6D30B1C65F269005BBA29 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F6D3051C65F269005BBA29 /* ParseFacebookUtilsV4.framework */; };
-		C0F6D30C1C65F269005BBA29 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F6D3061C65F269005BBA29 /* ParseTwitterUtils.framework */; };
-		C0F6D30D1C65F269005BBA29 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F6D3071C65F269005BBA29 /* ParseUI.framework */; };
+		C0F6D30F1C65FFB4005BBA29 /* PlayAudio1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F6D30E1C65FFB4005BBA29 /* PlayAudio1.swift */; };
+		C0F6D31A1C660094005BBA29 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F6D3141C660094005BBA29 /* Bolts.framework */; };
+		C0F6D31B1C660094005BBA29 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F6D3151C660094005BBA29 /* Parse.framework */; };
+		C0F6D31D1C660094005BBA29 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F6D3171C660094005BBA29 /* ParseFacebookUtilsV4.framework */; };
+		C0F6D31E1C660094005BBA29 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F6D3181C660094005BBA29 /* ParseTwitterUtils.framework */; };
+		C0F6D31F1C660094005BBA29 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F6D3191C660094005BBA29 /* ParseUI.framework */; };
+		C0F6D3211C66030C005BBA29 /* AudioErrorTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F6D3201C66030C005BBA29 /* AudioErrorTypes.swift */; };
+		C0F6D3251C660974005BBA29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F6D3241C660974005BBA29 /* ViewController.swift */; };
 		D27748111C6587F50085F36F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27748101C6587F50085F36F /* AppDelegate.swift */; };
 		D27748161C6587F50085F36F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D27748141C6587F50085F36F /* Main.storyboard */; };
 		D27748181C6587F50085F36F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D27748171C6587F50085F36F /* Assets.xcassets */; };
-		D277481B1C6587F50085F36F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D27748191C6587F50085F36F /* LaunchScreen.storyboard */; };
 		D27748261C6587F50085F36F /* socialBeaconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27748251C6587F50085F36F /* socialBeaconTests.swift */; };
 		D27748311C6587F50085F36F /* socialBeaconUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27748301C6587F50085F36F /* socialBeaconUITests.swift */; };
 		D27748541C6589350085F36F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D277484A1C6589350085F36F /* AudioToolbox.framework */; };
@@ -54,22 +56,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C0F6D2B11C65BE73005BBA29 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C0F6D2B11C65BE73005BBA29 /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		C0F6D2B51C65C143005BBA29 /* ChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		C0F6D2B91C65CDB3005BBA29 /* streamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = streamViewController.swift; sourceTree = "<group>"; };
 		C0F6D2C71C65DDBD005BBA29 /* photo-1433838552652-f9a46b332c40.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-1433838552652-f9a46b332c40.jpg"; sourceTree = "<group>"; };
 		C0F6D2C81C65DDBD005BBA29 /* photo-1444703686981-a3abbc4d4fe3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-1444703686981-a3abbc4d4fe3.jpg"; sourceTree = "<group>"; };
 		C0F6D3001C65F13F005BBA29 /* ParseInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseInterface.swift; path = ../ParseInterface.swift; sourceTree = "<group>"; };
-		C0F6D3021C65F269005BBA29 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../afs/andrew.cmu.edu/usr6/oskalli/Desktop/parse-library-1.12.0/Bolts.framework"; sourceTree = "<group>"; };
-		C0F6D3031C65F269005BBA29 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../../afs/andrew.cmu.edu/usr6/oskalli/Desktop/parse-library-1.12.0/Parse.framework"; sourceTree = "<group>"; };
-		C0F6D3051C65F269005BBA29 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = "../../../afs/andrew.cmu.edu/usr6/oskalli/Desktop/parse-library-1.12.0/ParseFacebookUtilsV4.framework"; sourceTree = "<group>"; };
-		C0F6D3061C65F269005BBA29 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseTwitterUtils.framework; path = "../../../afs/andrew.cmu.edu/usr6/oskalli/Desktop/parse-library-1.12.0/ParseTwitterUtils.framework"; sourceTree = "<group>"; };
-		C0F6D3071C65F269005BBA29 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "../../../afs/andrew.cmu.edu/usr6/oskalli/Desktop/parse-library-1.12.0/ParseUI.framework"; sourceTree = "<group>"; };
+		C0F6D30E1C65FFB4005BBA29 /* PlayAudio1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayAudio1.swift; sourceTree = "<group>"; };
+		C0F6D3141C660094005BBA29 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../afs/andrew.cmu.edu/usr6/oskalli/Desktop/parse-library-1.12.0/Bolts.framework"; sourceTree = "<group>"; };
+		C0F6D3151C660094005BBA29 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../../afs/andrew.cmu.edu/usr6/oskalli/Desktop/parse-library-1.12.0/Parse.framework"; sourceTree = "<group>"; };
+		C0F6D3171C660094005BBA29 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = "../../../afs/andrew.cmu.edu/usr6/oskalli/Desktop/parse-library-1.12.0/ParseFacebookUtilsV4.framework"; sourceTree = "<group>"; };
+		C0F6D3181C660094005BBA29 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseTwitterUtils.framework; path = "../../../afs/andrew.cmu.edu/usr6/oskalli/Desktop/parse-library-1.12.0/ParseTwitterUtils.framework"; sourceTree = "<group>"; };
+		C0F6D3191C660094005BBA29 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "../../../afs/andrew.cmu.edu/usr6/oskalli/Desktop/parse-library-1.12.0/ParseUI.framework"; sourceTree = "<group>"; };
+		C0F6D3201C66030C005BBA29 /* AudioErrorTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioErrorTypes.swift; sourceTree = "<group>"; };
+		C0F6D3241C660974005BBA29 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D277480D1C6587F50085F36F /* socialBeacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = socialBeacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D27748101C6587F50085F36F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D27748151C6587F50085F36F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D27748171C6587F50085F36F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D277481A1C6587F50085F36F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D277481C1C6587F50085F36F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D27748211C6587F50085F36F /* socialBeaconTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = socialBeaconTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D27748251C6587F50085F36F /* socialBeaconTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = socialBeaconTests.swift; sourceTree = "<group>"; };
@@ -94,30 +98,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0F6D3081C65F269005BBA29 /* Bolts.framework in Frameworks */,
-				C0F6D3091C65F269005BBA29 /* Parse.framework in Frameworks */,
-				C0F6D30B1C65F269005BBA29 /* ParseFacebookUtilsV4.framework in Frameworks */,
-				C0F6D30C1C65F269005BBA29 /* ParseTwitterUtils.framework in Frameworks */,
-				C0F6D30D1C65F269005BBA29 /* ParseUI.framework in Frameworks */,
 				D27748541C6589350085F36F /* AudioToolbox.framework in Frameworks */,
 				D27748551C6589350085F36F /* CFNetwork.framework in Frameworks */,
 				D27748561C6589350085F36F /* CoreGraphics.framework in Frameworks */,
 				D27748571C6589350085F36F /* CoreLocation.framework in Frameworks */,
-				1BB2DFD71C65C96100974F73 /* ParseFacebookUtils.framework in Frameworks */,
-				940892AC1C65961E00ABD83A /* ParseFacebookUtils.framework in Frameworks */,
 				D27748581C6589350085F36F /* libsqlite3.tbd in Frameworks */,
 				D27748591C6589350085F36F /* libz.tbd in Frameworks */,
 				D277485A1C6589350085F36F /* QuartzCore.framework in Frameworks */,
-				1BB2DFD91C65C96100974F73 /* ParseTwitterUtils.framework in Frameworks */,
-				940892AE1C65961E00ABD83A /* ParseTwitterUtils.framework in Frameworks */,
-				1BB2DFD61C65C96100974F73 /* Parse.framework in Frameworks */,
 				D277485B1C6589350085F36F /* Security.framework in Frameworks */,
-				940892AB1C65961E00ABD83A /* Parse.framework in Frameworks */,
-				1BB2DFD81C65C96100974F73 /* ParseFacebookUtilsV4.framework in Frameworks */,
-				1BB2DFD51C65C96100974F73 /* Bolts.framework in Frameworks */,
+				C0F6D31A1C660094005BBA29 /* Bolts.framework in Frameworks */,
+				C0F6D31B1C660094005BBA29 /* Parse.framework in Frameworks */,
+				C0F6D31D1C660094005BBA29 /* ParseFacebookUtilsV4.framework in Frameworks */,
+				C0F6D31E1C660094005BBA29 /* ParseTwitterUtils.framework in Frameworks */,
+				C0F6D31F1C660094005BBA29 /* ParseUI.framework in Frameworks */,
 				D277485C1C6589350085F36F /* StoreKit.framework in Frameworks */,
-				940892AD1C65961E00ABD83A /* ParseFacebookUtilsV4.framework in Frameworks */,
-				940892AA1C65961E00ABD83A /* Bolts.framework in Frameworks */,
 				D277485D1C6589350085F36F /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,11 +145,12 @@
 		D27748041C6587F50085F36F = {
 			isa = PBXGroup;
 			children = (
-				C0F6D3021C65F269005BBA29 /* Bolts.framework */,
-				C0F6D3031C65F269005BBA29 /* Parse.framework */,
-				C0F6D3051C65F269005BBA29 /* ParseFacebookUtilsV4.framework */,
-				C0F6D3061C65F269005BBA29 /* ParseTwitterUtils.framework */,
-				C0F6D3071C65F269005BBA29 /* ParseUI.framework */,
+				C0F6D3241C660974005BBA29 /* ViewController.swift */,
+				C0F6D3141C660094005BBA29 /* Bolts.framework */,
+				C0F6D3151C660094005BBA29 /* Parse.framework */,
+				C0F6D3171C660094005BBA29 /* ParseFacebookUtilsV4.framework */,
+				C0F6D3181C660094005BBA29 /* ParseTwitterUtils.framework */,
+				C0F6D3191C660094005BBA29 /* ParseUI.framework */,
 				D277484A1C6589350085F36F /* AudioToolbox.framework */,
 				D277484B1C6589350085F36F /* CFNetwork.framework */,
 				D277484C1C6589350085F36F /* CoreGraphics.framework */,
@@ -187,14 +182,15 @@
 		D277480F1C6587F50085F36F /* socialBeacon */ = {
 			isa = PBXGroup;
 			children = (
+				C0F6D30E1C65FFB4005BBA29 /* PlayAudio1.swift */,
 				C0F6D3001C65F13F005BBA29 /* ParseInterface.swift */,
+				C0F6D3201C66030C005BBA29 /* AudioErrorTypes.swift */,
 				D27748101C6587F50085F36F /* AppDelegate.swift */,
-				C0F6D2B11C65BE73005BBA29 /* ViewController.swift */,
+				C0F6D2B11C65BE73005BBA29 /* RecordViewController.swift */,
 				D27748141C6587F50085F36F /* Main.storyboard */,
 				C0F6D2B51C65C143005BBA29 /* ChannelViewController.swift */,
 				C0F6D2B91C65CDB3005BBA29 /* streamViewController.swift */,
 				D27748171C6587F50085F36F /* Assets.xcassets */,
-				D27748191C6587F50085F36F /* LaunchScreen.storyboard */,
 				D277481C1C6587F50085F36F /* Info.plist */,
 			);
 			path = socialBeacon;
@@ -325,7 +321,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D277481B1C6587F50085F36F /* LaunchScreen.storyboard in Resources */,
 				C0F6D2C91C65DDBD005BBA29 /* photo-1433838552652-f9a46b332c40.jpg in Resources */,
 				D27748181C6587F50085F36F /* Assets.xcassets in Resources */,
 				D27748161C6587F50085F36F /* Main.storyboard in Resources */,
@@ -354,10 +349,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0F6D30F1C65FFB4005BBA29 /* PlayAudio1.swift in Sources */,
+				C0F6D3211C66030C005BBA29 /* AudioErrorTypes.swift in Sources */,
 				C0F6D2BA1C65CDB3005BBA29 /* streamViewController.swift in Sources */,
 				C0F6D3011C65F13F005BBA29 /* ParseInterface.swift in Sources */,
-				C0F6D2B21C65BE73005BBA29 /* ViewController.swift in Sources */,
+				C0F6D2B21C65BE73005BBA29 /* RecordViewController.swift in Sources */,
 				C0F6D2B61C65C143005BBA29 /* ChannelViewController.swift in Sources */,
+				C0F6D3251C660974005BBA29 /* ViewController.swift in Sources */,
 				D27748111C6587F50085F36F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,14 +398,6 @@
 				D27748151C6587F50085F36F /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D27748191C6587F50085F36F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D277481A1C6587F50085F36F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
