@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D27748111C6587F50085F36F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27748101C6587F50085F36F /* AppDelegate.swift */; };
-		D27748131C6587F50085F36F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27748121C6587F50085F36F /* ViewController.swift */; };
+		D27748131C6587F50085F36F /* ParseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27748121C6587F50085F36F /* ParseInterface.swift */; };
 		D27748161C6587F50085F36F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D27748141C6587F50085F36F /* Main.storyboard */; };
 		D27748181C6587F50085F36F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D27748171C6587F50085F36F /* Assets.xcassets */; };
 		D277481B1C6587F50085F36F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D27748191C6587F50085F36F /* LaunchScreen.storyboard */; };
@@ -30,6 +30,8 @@
 		D277485B1C6589350085F36F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27748511C6589350085F36F /* Security.framework */; };
 		D277485C1C6589350085F36F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27748521C6589350085F36F /* StoreKit.framework */; };
 		D277485D1C6589350085F36F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27748531C6589350085F36F /* SystemConfiguration.framework */; };
+		D2885F331C65B22A00DB8D95 /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D2885F321C65B22A00DB8D95 /* song.mp3 */; };
+		D2885F351C65E8DF00DB8D95 /* RecordCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2885F341C65E8DF00DB8D95 /* RecordCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +54,7 @@
 /* Begin PBXFileReference section */
 		D277480D1C6587F50085F36F /* socialBeacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = socialBeacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D27748101C6587F50085F36F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D27748121C6587F50085F36F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D27748121C6587F50085F36F /* ParseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseInterface.swift; sourceTree = "<group>"; };
 		D27748151C6587F50085F36F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D27748171C6587F50085F36F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D277481A1C6587F50085F36F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,12 +65,12 @@
 		D277482C1C6587F50085F36F /* socialBeaconUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = socialBeaconUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D27748301C6587F50085F36F /* socialBeaconUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = socialBeaconUITests.swift; sourceTree = "<group>"; };
 		D27748321C6587F50085F36F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D277483E1C6588F40085F36F /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		D277483F1C6588F40085F36F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		D27748401C6588F40085F36F /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
-		D27748411C6588F40085F36F /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
-		D27748421C6588F40085F36F /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseTwitterUtils.framework; sourceTree = "<group>"; };
-		D27748431C6588F40085F36F /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		D277483E1C6588F40085F36F /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = socialBeacon/Bolts.framework; sourceTree = "<group>"; };
+		D277483F1C6588F40085F36F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = socialBeacon/Parse.framework; sourceTree = "<group>"; };
+		D27748401C6588F40085F36F /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = socialBeacon/ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		D27748411C6588F40085F36F /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = socialBeacon/ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		D27748421C6588F40085F36F /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseTwitterUtils.framework; path = socialBeacon/ParseTwitterUtils.framework; sourceTree = "<group>"; };
+		D27748431C6588F40085F36F /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = socialBeacon/ParseUI.framework; sourceTree = "<group>"; };
 		D277484A1C6589350085F36F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D277484B1C6589350085F36F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		D277484C1C6589350085F36F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -79,6 +81,8 @@
 		D27748511C6589350085F36F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D27748521C6589350085F36F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D27748531C6589350085F36F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D2885F321C65B22A00DB8D95 /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = song.mp3; path = ../../song.mp3; sourceTree = "<group>"; };
+		D2885F341C65E8DF00DB8D95 /* RecordCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,12 @@
 		D27748041C6587F50085F36F = {
 			isa = PBXGroup;
 			children = (
+				D277483E1C6588F40085F36F /* Bolts.framework */,
+				D277483F1C6588F40085F36F /* Parse.framework */,
+				D27748401C6588F40085F36F /* ParseFacebookUtils.framework */,
+				D27748411C6588F40085F36F /* ParseFacebookUtilsV4.framework */,
+				D27748421C6588F40085F36F /* ParseTwitterUtils.framework */,
+				D27748431C6588F40085F36F /* ParseUI.framework */,
 				D277484A1C6589350085F36F /* AudioToolbox.framework */,
 				D277484B1C6589350085F36F /* CFNetwork.framework */,
 				D277484C1C6589350085F36F /* CoreGraphics.framework */,
@@ -155,14 +165,10 @@
 		D277480F1C6587F50085F36F /* socialBeacon */ = {
 			isa = PBXGroup;
 			children = (
-				D277483E1C6588F40085F36F /* Bolts.framework */,
-				D277483F1C6588F40085F36F /* Parse.framework */,
-				D27748401C6588F40085F36F /* ParseFacebookUtils.framework */,
-				D27748411C6588F40085F36F /* ParseFacebookUtilsV4.framework */,
-				D27748421C6588F40085F36F /* ParseTwitterUtils.framework */,
-				D27748431C6588F40085F36F /* ParseUI.framework */,
+				D2885F321C65B22A00DB8D95 /* song.mp3 */,
 				D27748101C6587F50085F36F /* AppDelegate.swift */,
-				D27748121C6587F50085F36F /* ViewController.swift */,
+				D27748121C6587F50085F36F /* ParseInterface.swift */,
+				D2885F341C65E8DF00DB8D95 /* RecordCode.swift */,
 				D27748141C6587F50085F36F /* Main.storyboard */,
 				D27748171C6587F50085F36F /* Assets.xcassets */,
 				D27748191C6587F50085F36F /* LaunchScreen.storyboard */,
@@ -295,6 +301,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2885F331C65B22A00DB8D95 /* song.mp3 in Resources */,
 				D277481B1C6587F50085F36F /* LaunchScreen.storyboard in Resources */,
 				D27748181C6587F50085F36F /* Assets.xcassets in Resources */,
 				D27748161C6587F50085F36F /* Main.storyboard in Resources */,
@@ -322,7 +329,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D27748131C6587F50085F36F /* ViewController.swift in Sources */,
+				D27748131C6587F50085F36F /* ParseInterface.swift in Sources */,
+				D2885F351C65E8DF00DB8D95 /* RecordCode.swift in Sources */,
 				D27748111C6587F50085F36F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -560,6 +568,7 @@
 				D27748371C6587F50085F36F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D27748381C6587F50085F36F /* Build configuration list for PBXNativeTarget "socialBeaconTests" */ = {
 			isa = XCConfigurationList;
@@ -568,6 +577,7 @@
 				D277483A1C6587F50085F36F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D277483B1C6587F50085F36F /* Build configuration list for PBXNativeTarget "socialBeaconUITests" */ = {
 			isa = XCConfigurationList;
@@ -576,6 +586,7 @@
 				D277483D1C6587F50085F36F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
