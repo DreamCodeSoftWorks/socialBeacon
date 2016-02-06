@@ -49,7 +49,7 @@ class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
     
     // Set the chirp-label to indicate that we're ready to record
     func loadRecordingUI() {
-        chirpLabel.text = "Ready to chirp"
+        chirpLabel.text = "Ready to Chirp"
         RecordBTN.enabled = true
         PlaybackBTN.enabled = false
         UploadBTN.enabled = false
@@ -92,6 +92,7 @@ class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         ]
         
         RecordBTN.setTitle("Stop", forState: .Normal)
+        chirpLabel.text = "Recording"
         
         do {
             chirpRecorder = try AVAudioRecorder(URL: audioURL, settings: settings)
@@ -108,7 +109,7 @@ class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         chirpRecorder = nil
         
         if success {
-            chirpLabel.text = "Chirped"
+            chirpLabel.text = "Recorded"
             RecordBTN.setTitle("Tap to Re-record", forState: .Normal)
             PlaybackBTN.enabled = true
             UploadBTN.enabled = true
@@ -129,6 +130,7 @@ class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
 
     // Start the playback of the chirp (give them an opportunity to re-record)
     func startPlayback() {
+        chirpLabel.text = "Playing Back"
         do {
             chirpPlayer = try AVAudioPlayer(contentsOfURL: audioURL)
             chirpPlayer.delegate = self
@@ -143,9 +145,10 @@ class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
     func finishPlayback(success success: Bool) {
         chirpPlayer = nil
         if success {
+            chirpLabel.text = "End of Playback"
             PlaybackBTN.setTitle("Playback", forState: .Normal)
         } else {
-            
+            chirpLabel.text = "Error Occurred :/"
         }
     }
     
@@ -178,5 +181,6 @@ class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         ParseInterface.uploadParseSound(streamTitle!, recordingName: "chirp.m4a")
         PlaybackBTN.enabled = false
         UploadBTN.enabled = false
+        chirpLabel.text = "Uploaded, Ready to Chirp Again"
     }
 }
