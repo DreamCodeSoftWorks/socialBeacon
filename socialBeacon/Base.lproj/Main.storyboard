@@ -204,6 +204,18 @@
                                     <action selector="playButton:" destination="uD3-pN-Kqb" eventType="touchUpInside" id="EIN-Ry-Dor"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.10000000000000001" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="dZD-tA-9yV">
+                                <rect key="frame" x="142" y="285" width="317" height="31"/>
+                                <connections>
+                                    <action selector="SliderChanged:" destination="uD3-pN-Kqb" eventType="valueChanged" id="Kyj-O6-Tv0"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qe-3n-jR7">
+                                <rect key="frame" x="221" y="256" width="159" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -217,6 +229,10 @@
                             <constraint firstItem="ekR-aF-2eh" firstAttribute="centerX" secondItem="u3x-Gz-Erz" secondAttribute="centerX" id="tsM-00-sGO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="RateLabel" destination="1qe-3n-jR7" id="D78-eA-ykl"/>
+                        <outlet property="RateSlider" destination="dZD-tA-9yV" id="Hjp-e1-ZZR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDl-Ej-I6O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -16,16 +16,25 @@ public var SelectedSongNumber = Int()
 
 class streamViewController: UIViewController {
 
+    @IBOutlet var RateLabel: UILabel!
+    @IBOutlet var RateSlider: UISlider!
     var parseInt : ParseInterface
+    var currentValue: Float?
     var streamTitle: String?
     var channelSounds: [PFObject] = []
 
     @IBAction func playButton(sender: AnyObject) {
         parseInt.playChannelSounds(channelSounds)
-
+        RateSlider.value = 1.0
+        RateLabel.text = "1.0x Speed"
     }
     @IBAction func recordButton(sender: AnyObject) {
         parseInt.stopChannelSounds()
+    }
+    @IBAction func SliderChanged(sender: UISlider) {
+        currentValue = sender.value
+        RateLabel.text = "\(currentValue!)x Speed"
+        parseInt.audioPlayer.rate = currentValue!
     }
 
     required init(coder decoder: NSCoder) {
@@ -36,6 +45,9 @@ class streamViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = streamTitle
+        RateSlider.value = 1.0
+        RateLabel.text = "1.0x Speed"
+        currentValue = 1.0
     }
     
     override func viewDidAppear(animated: Bool) {
