@@ -50,6 +50,9 @@ class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
     // Set the chirp-label to indicate that we're ready to record
     func loadRecordingUI() {
         chirpLabel.text = "Ready to chirp"
+        RecordBTN.enabled = true
+        PlaybackBTN.enabled = false
+        UploadBTN.enabled = false
     }
     
     // Indicate that we can't record with this device
@@ -107,6 +110,8 @@ class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         if success {
             chirpLabel.text = "Chirped"
             RecordBTN.setTitle("Tap to Re-record", forState: .Normal)
+            PlaybackBTN.enabled = true
+            UploadBTN.enabled = true
         } else {
             RecordBTN.setTitle("Tap to Record", forState: .Normal)
         }
@@ -171,5 +176,7 @@ class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
     
     @IBAction func Upload(sender: UIButton) {
         ParseInterface.uploadParseSound(streamTitle!, recordingName: "chirp.m4a")
+        PlaybackBTN.enabled = false
+        UploadBTN.enabled = false
     }
 }

@@ -69,18 +69,19 @@ class ParseInterface {
     // Iterate through the sound clips, play them with the AVQueuePlayer
     func playChannelSounds(channelSoundObjs: [PFObject]) {
         print("Playing sounds \(channelSoundObjs.count)")
-        var soundItems = [AVPlayerItem]()
+        self.audioPlayer = AVQueuePlayer(items: [AVPlayerItem]())
 
         for channelSoundObject in channelSoundObjs {
             if let channelSoundFile = channelSoundObject["sound"] as? PFFile {
                 if let soundURL = NSURL(string: channelSoundFile.url!) {
                     print("Sound at \(soundURL)")
                     let soundItem = AVPlayerItem(URL: soundURL)
-                    soundItems.append(soundItem)
+                    if (self.audioPlayer.canInsertItem(soundItem, afterItem: nil)) {
+                        self.audioPlayer.insertItem(soundItem, afterItem: nil)
+                    }
                 }
             }
             print("Playing sounds")
-            self.audioPlayer = AVQueuePlayer(items: soundItems)
             self.audioPlayer.play()
         }
     }

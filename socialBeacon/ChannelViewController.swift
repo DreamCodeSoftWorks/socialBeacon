@@ -13,12 +13,26 @@ class ChannelTableViewController: UITableViewController {
     var channelArray: [String] = []
     var selected = 0
     var selectedTwitterTrend : String?
+    
+    var channelRefreshControl: UIRefreshControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         channelArray = ["Super Bowl 50", "Democratic Debate", "Party Channel", "Local Channel"]
         tableView.reloadData()
+        
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        self.refreshControl?.addTarget(self, action: "refreshChannels:", forControlEvents: UIControlEvents.ValueChanged)
+        self.tableView.addSubview(refreshControl!)
+    }
+    
+    func refreshChannels(refreshControl: UIRefreshControl) {
+        //Pull new channel list from parse
+        
+        self.tableView.reloadData()
+        refreshControl.endRefreshing()
     }
     
     

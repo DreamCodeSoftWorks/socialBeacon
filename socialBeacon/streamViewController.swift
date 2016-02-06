@@ -36,6 +36,10 @@ class streamViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = streamTitle
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         parseInt.downloadChannelSounds(streamTitle!, streamView: self)
     }
 
