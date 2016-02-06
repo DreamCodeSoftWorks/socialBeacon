@@ -204,14 +204,20 @@
                                     <action selector="playButton:" destination="uD3-pN-Kqb" eventType="touchUpInside" id="EIN-Ry-Dor"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.10000000000000001" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="dZD-tA-9yV">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.10000000000000001" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="dZD-tA-9yV">
                                 <rect key="frame" x="142" y="285" width="317" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="313" id="uoB-kl-njM"/>
+                                </constraints>
                                 <connections>
                                     <action selector="SliderChanged:" destination="uD3-pN-Kqb" eventType="valueChanged" id="Kyj-O6-Tv0"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qe-3n-jR7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qe-3n-jR7">
                                 <rect key="frame" x="221" y="256" width="159" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="159" id="WDy-pu-i8I"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -219,14 +225,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="u3x-Gz-Erz" firstAttribute="top" secondItem="dZD-tA-9yV" secondAttribute="bottom" constant="82" id="0Ey-Xs-e3y"/>
                             <constraint firstItem="Bhh-F9-WXh" firstAttribute="top" secondItem="l6f-98-gz0" secondAttribute="bottom" constant="54" id="4fw-3w-PUi"/>
+                            <constraint firstItem="dZD-tA-9yV" firstAttribute="centerX" secondItem="b6O-Xe-CUU" secondAttribute="centerX" id="4uS-tv-zUT"/>
                             <constraint firstItem="ekR-aF-2eh" firstAttribute="top" secondItem="u3x-Gz-Erz" secondAttribute="bottom" constant="8" symbolic="YES" id="5b8-18-osV"/>
+                            <constraint firstItem="1qe-3n-jR7" firstAttribute="centerX" secondItem="b6O-Xe-CUU" secondAttribute="centerX" id="KO6-Y4-tuE"/>
+                            <constraint firstItem="dZD-tA-9yV" firstAttribute="top" secondItem="1qe-3n-jR7" secondAttribute="bottom" constant="8" symbolic="YES" id="UQ3-Sx-7T9"/>
                             <constraint firstItem="EPW-pq-awS" firstAttribute="top" secondItem="ekR-aF-2eh" secondAttribute="bottom" constant="31" id="YX1-F0-b9E"/>
                             <constraint firstItem="l6f-98-gz0" firstAttribute="top" secondItem="EPW-pq-awS" secondAttribute="bottom" constant="8" symbolic="YES" id="fx7-MY-DXc"/>
                             <constraint firstItem="ekR-aF-2eh" firstAttribute="centerX" secondItem="b6O-Xe-CUU" secondAttribute="centerX" id="i4Q-dE-4bV"/>
                             <constraint firstItem="l6f-98-gz0" firstAttribute="centerX" secondItem="EPW-pq-awS" secondAttribute="centerX" id="ju9-PX-FOP"/>
                             <constraint firstItem="EPW-pq-awS" firstAttribute="centerX" secondItem="ekR-aF-2eh" secondAttribute="centerX" id="taS-eY-UJJ"/>
                             <constraint firstItem="ekR-aF-2eh" firstAttribute="centerX" secondItem="u3x-Gz-Erz" secondAttribute="centerX" id="tsM-00-sGO"/>
+                            <constraint firstItem="1qe-3n-jR7" firstAttribute="top" secondItem="k6l-zk-gCs" secondAttribute="bottom" constant="192" id="vhT-0q-n6t"/>
+                            <constraint firstItem="dZD-tA-9yV" firstAttribute="centerY" secondItem="b6O-Xe-CUU" secondAttribute="centerY" id="zr6-iD-Uca"/>
                         </constraints>
                     </view>
                     <connections>
