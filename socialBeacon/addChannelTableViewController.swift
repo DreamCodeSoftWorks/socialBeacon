@@ -8,19 +8,17 @@
 
 import UIKit
 
-class ChannelTableViewController: UITableViewController {
+class AddChannelTableViewController: UITableViewController {
     
-    var channelArray: [String] = []
     var selected = 0
+    var twitterTrendsArray : [String]?
     var selectedTwitterTrend : String?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        channelArray = ["Super Bowl 50", "Democratic Debate", "Party Channel", "Local Channel"]
         tableView.reloadData()
     }
-
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -28,37 +26,32 @@ class ChannelTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-       let cell = tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell!
-        cell.textLabel?.text = channelArray[indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier("channelCell") as UITableViewCell!
+        //Change to implement twitter hashtag names
+        //cell.textLabel?.text = channelArray[indexPath.row]
         return cell
         
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         return channelArray.count
+        //Determines how many cells in a tableViewController
+        //return channelArray.count
+        return 0
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         selected = indexPath.row
-        performSegueWithIdentifier("channelSegue", sender: nil)
+        performSegueWithIdentifier("addChannelSegue", sender: nil)
     }
     
-
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "channelSegue" {
+        if segue.identifier == "addChannelSegue" {
             if let dest = segue.destinationViewController as? streamViewController {
-                dest.streamTitle = channelArray[selected]
-            }
-            
-            if segue.identifier == "addChannelSegue" {
-                let addChannelController = segue.destinationViewController as!AddChannelTableViewController
-                selectedTwitterTrend = addChannelController.selectedTwitterTrend
-                channelArray.append(selectedTwitterTrend!)
-                tableView.reloadData()
+                dest.streamTitle = twitterTrendsArray![selected]
             }
         }
     }
-
+    
 }

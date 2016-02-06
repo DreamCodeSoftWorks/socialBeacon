@@ -108,14 +108,48 @@
                             <outlet property="delegate" destination="ZjG-Gy-jxJ" id="eQj-oc-lmQ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ZOv-zh-tbw"/>
+                    <navigationItem key="navigationItem" id="ZOv-zh-tbw">
+                        <barButtonItem key="rightBarButtonItem" title="Add Channel" id="bTt-bx-Eol">
+                            <connections>
+                                <segue destination="K5z-YH-ib1" kind="show" identifier="addChannelSegue" id="RXq-ZO-xFw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="uD3-pN-Kqb" kind="show" identifier="channelSegue" id="IsH-mK-Eh5"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kQf-QJ-jUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2254" y="708"/>
+            <point key="canvasLocation" x="2252" y="708"/>
+        </scene>
+        <!--Add Channel Table View Controller-->
+        <scene sceneID="89G-94-Jde">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Drl-Fa-gdz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="K5z-YH-ib1" customClass="AddChannelTableViewController" customModule="socialBeacon" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="lrn-rY-zUd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="channelCell" id="GVb-8O-Psa">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GVb-8O-Psa" id="GtI-j7-kbe">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="K5z-YH-ib1" id="xXb-Y5-TXc"/>
+                            <outlet property="delegate" destination="K5z-YH-ib1" id="eyk-Vw-6Tc"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="3199" y="-34"/>
         </scene>
         <!--Stream View Controller-->
         <scene sceneID="fAl-pU-MbK">
@@ -179,7 +213,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDl-Ej-I6O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3199" y="708"/>
+            <point key="canvasLocation" x="3187" y="724"/>
         </scene>
         <!--Record View Controller-->
         <scene sceneID="idb-5L-uIV">
