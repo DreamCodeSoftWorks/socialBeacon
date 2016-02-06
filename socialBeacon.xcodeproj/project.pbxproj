@@ -19,12 +19,6 @@
 		940892AD1C65961E00ABD83A /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940892A71C65961E00ABD83A /* ParseFacebookUtilsV4.framework */; };
 		940892AE1C65961E00ABD83A /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940892A81C65961E00ABD83A /* ParseTwitterUtils.framework */; };
 		940892AF1C65961E00ABD83A /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940892A91C65961E00ABD83A /* ParseUI.framework */; };
-		940892DE1C65AE8200ABD83A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940892D81C65AE8200ABD83A /* Bolts.framework */; };
-		940892DF1C65AE8200ABD83A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940892D91C65AE8200ABD83A /* Parse.framework */; };
-		940892E01C65AE8200ABD83A /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940892DA1C65AE8200ABD83A /* ParseFacebookUtils.framework */; };
-		940892E11C65AE8200ABD83A /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940892DB1C65AE8200ABD83A /* ParseFacebookUtilsV4.framework */; };
-		940892E21C65AE8200ABD83A /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940892DC1C65AE8200ABD83A /* ParseTwitterUtils.framework */; };
-		940892E31C65AE8200ABD83A /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940892DD1C65AE8200ABD83A /* ParseUI.framework */; };
 		940892E71C65AF4E00ABD83A /* PlayAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940892E61C65AF4E00ABD83A /* PlayAudio.swift */; };
 		940892E91C65AFBF00ABD83A /* AudioErrorTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940892E81C65AFBF00ABD83A /* AudioErrorTypes.swift */; };
 		D27748111C6587F50085F36F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27748101C6587F50085F36F /* AppDelegate.swift */; };
@@ -207,7 +201,6 @@
 		D277480F1C6587F50085F36F /* socialBeacon */ = {
 			isa = PBXGroup;
 			children = (
-				940892A01C65923400ABD83A /* RecordAudio.swift */,
 				940892E61C65AF4E00ABD83A /* PlayAudio.swift */,
 				940892E81C65AFBF00ABD83A /* AudioErrorTypes.swift */,
 				D27748101C6587F50085F36F /* AppDelegate.swift */,
@@ -373,7 +366,6 @@
 			files = (
 				D27748131C6587F50085F36F /* ViewController.swift in Sources */,
 				940892E91C65AFBF00ABD83A /* AudioErrorTypes.swift in Sources */,
-				940892A11C65923400ABD83A /* RecordAudio.swift in Sources */,
 				940892E71C65AF4E00ABD83A /* PlayAudio.swift in Sources */,
 				D27748111C6587F50085F36F /* AppDelegate.swift in Sources */,
 			);
