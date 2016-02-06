@@ -7,64 +7,129 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1955D73C1C645AD2006C680C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1955D73B1C645AD2006C680C /* AppDelegate.swift */; };
-		1955D73E1C645AD2006C680C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1955D73D1C645AD2006C680C /* ViewController.swift */; };
-		1955D7411C645AD2006C680C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1955D73F1C645AD2006C680C /* Main.storyboard */; };
-		1955D7431C645AD2006C680C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1955D7421C645AD2006C680C /* Assets.xcassets */; };
-		1955D7461C645AD2006C680C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1955D7441C645AD2006C680C /* LaunchScreen.storyboard */; };
-		1955D7511C645AD3006C680C /* socialBeaconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1955D7501C645AD3006C680C /* socialBeaconTests.swift */; };
-		1955D75C1C645AD3006C680C /* socialBeaconUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1955D75B1C645AD3006C680C /* socialBeaconUITests.swift */; };
+		C0F6D2B21C65BE73005BBA29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F6D2B11C65BE73005BBA29 /* ViewController.swift */; };
+		C0F6D2B61C65C143005BBA29 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F6D2B51C65C143005BBA29 /* ChannelViewController.swift */; };
+		C0F6D2BA1C65CDB3005BBA29 /* streamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F6D2B91C65CDB3005BBA29 /* streamViewController.swift */; };
+		C0F6D2C91C65DDBD005BBA29 /* photo-1433838552652-f9a46b332c40.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C0F6D2C71C65DDBD005BBA29 /* photo-1433838552652-f9a46b332c40.jpg */; };
+		C0F6D2CA1C65DDBD005BBA29 /* photo-1444703686981-a3abbc4d4fe3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C0F6D2C81C65DDBD005BBA29 /* photo-1444703686981-a3abbc4d4fe3.jpg */; };
+		C0F6D3011C65F13F005BBA29 /* ParseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F6D3001C65F13F005BBA29 /* ParseInterface.swift */; };
+		C0F6D3081C65F269005BBA29 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F6D3021C65F269005BBA29 /* Bolts.framework */; };
+		C0F6D3091C65F269005BBA29 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F6D3031C65F269005BBA29 /* Parse.framework */; };
+		C0F6D30B1C65F269005BBA29 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F6D3051C65F269005BBA29 /* ParseFacebookUtilsV4.framework */; };
+		C0F6D30C1C65F269005BBA29 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F6D3061C65F269005BBA29 /* ParseTwitterUtils.framework */; };
+		C0F6D30D1C65F269005BBA29 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F6D3071C65F269005BBA29 /* ParseUI.framework */; };
+		D27748111C6587F50085F36F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27748101C6587F50085F36F /* AppDelegate.swift */; };
+		D27748161C6587F50085F36F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D27748141C6587F50085F36F /* Main.storyboard */; };
+		D27748181C6587F50085F36F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D27748171C6587F50085F36F /* Assets.xcassets */; };
+		D277481B1C6587F50085F36F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D27748191C6587F50085F36F /* LaunchScreen.storyboard */; };
+		D27748261C6587F50085F36F /* socialBeaconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27748251C6587F50085F36F /* socialBeaconTests.swift */; };
+		D27748311C6587F50085F36F /* socialBeaconUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27748301C6587F50085F36F /* socialBeaconUITests.swift */; };
+		D27748541C6589350085F36F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D277484A1C6589350085F36F /* AudioToolbox.framework */; };
+		D27748551C6589350085F36F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D277484B1C6589350085F36F /* CFNetwork.framework */; };
+		D27748561C6589350085F36F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D277484C1C6589350085F36F /* CoreGraphics.framework */; };
+		D27748571C6589350085F36F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D277484D1C6589350085F36F /* CoreLocation.framework */; };
+		D27748581C6589350085F36F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D277484E1C6589350085F36F /* libsqlite3.tbd */; };
+		D27748591C6589350085F36F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D277484F1C6589350085F36F /* libz.tbd */; };
+		D277485A1C6589350085F36F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27748501C6589350085F36F /* QuartzCore.framework */; };
+		D277485B1C6589350085F36F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27748511C6589350085F36F /* Security.framework */; };
+		D277485C1C6589350085F36F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27748521C6589350085F36F /* StoreKit.framework */; };
+		D277485D1C6589350085F36F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27748531C6589350085F36F /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1955D74D1C645AD3006C680C /* PBXContainerItemProxy */ = {
+		D27748221C6587F50085F36F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1955D7301C645AD1006C680C /* Project object */;
+			containerPortal = D27748051C6587F50085F36F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1955D7371C645AD1006C680C;
+			remoteGlobalIDString = D277480C1C6587F50085F36F;
 			remoteInfo = socialBeacon;
 		};
-		1955D7581C645AD3006C680C /* PBXContainerItemProxy */ = {
+		D277482D1C6587F50085F36F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1955D7301C645AD1006C680C /* Project object */;
+			containerPortal = D27748051C6587F50085F36F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1955D7371C645AD1006C680C;
+			remoteGlobalIDString = D277480C1C6587F50085F36F;
 			remoteInfo = socialBeacon;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1955D7381C645AD2006C680C /* socialBeacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = socialBeacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1955D73B1C645AD2006C680C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1955D73D1C645AD2006C680C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1955D7401C645AD2006C680C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1955D7421C645AD2006C680C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1955D7451C645AD2006C680C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		1955D7471C645AD2006C680C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1955D74C1C645AD2006C680C /* socialBeaconTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = socialBeaconTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1955D7501C645AD3006C680C /* socialBeaconTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = socialBeaconTests.swift; sourceTree = "<group>"; };
-		1955D7521C645AD3006C680C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1955D7571C645AD3006C680C /* socialBeaconUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = socialBeaconUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1955D75B1C645AD3006C680C /* socialBeaconUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = socialBeaconUITests.swift; sourceTree = "<group>"; };
-		1955D75D1C645AD3006C680C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0F6D2B11C65BE73005BBA29 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C0F6D2B51C65C143005BBA29 /* ChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
+		C0F6D2B91C65CDB3005BBA29 /* streamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = streamViewController.swift; sourceTree = "<group>"; };
+		C0F6D2C71C65DDBD005BBA29 /* photo-1433838552652-f9a46b332c40.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-1433838552652-f9a46b332c40.jpg"; sourceTree = "<group>"; };
+		C0F6D2C81C65DDBD005BBA29 /* photo-1444703686981-a3abbc4d4fe3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-1444703686981-a3abbc4d4fe3.jpg"; sourceTree = "<group>"; };
+		C0F6D3001C65F13F005BBA29 /* ParseInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseInterface.swift; path = ../ParseInterface.swift; sourceTree = "<group>"; };
+		C0F6D3021C65F269005BBA29 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../afs/andrew.cmu.edu/usr6/oskalli/Desktop/parse-library-1.12.0/Bolts.framework"; sourceTree = "<group>"; };
+		C0F6D3031C65F269005BBA29 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../../afs/andrew.cmu.edu/usr6/oskalli/Desktop/parse-library-1.12.0/Parse.framework"; sourceTree = "<group>"; };
+		C0F6D3051C65F269005BBA29 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = "../../../afs/andrew.cmu.edu/usr6/oskalli/Desktop/parse-library-1.12.0/ParseFacebookUtilsV4.framework"; sourceTree = "<group>"; };
+		C0F6D3061C65F269005BBA29 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseTwitterUtils.framework; path = "../../../afs/andrew.cmu.edu/usr6/oskalli/Desktop/parse-library-1.12.0/ParseTwitterUtils.framework"; sourceTree = "<group>"; };
+		C0F6D3071C65F269005BBA29 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "../../../afs/andrew.cmu.edu/usr6/oskalli/Desktop/parse-library-1.12.0/ParseUI.framework"; sourceTree = "<group>"; };
+		D277480D1C6587F50085F36F /* socialBeacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = socialBeacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D27748101C6587F50085F36F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D27748151C6587F50085F36F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D27748171C6587F50085F36F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D277481A1C6587F50085F36F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D277481C1C6587F50085F36F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D27748211C6587F50085F36F /* socialBeaconTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = socialBeaconTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D27748251C6587F50085F36F /* socialBeaconTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = socialBeaconTests.swift; sourceTree = "<group>"; };
+		D27748271C6587F50085F36F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D277482C1C6587F50085F36F /* socialBeaconUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = socialBeaconUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D27748301C6587F50085F36F /* socialBeaconUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = socialBeaconUITests.swift; sourceTree = "<group>"; };
+		D27748321C6587F50085F36F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D277484A1C6589350085F36F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D277484B1C6589350085F36F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		D277484C1C6589350085F36F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D277484D1C6589350085F36F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D277484E1C6589350085F36F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		D277484F1C6589350085F36F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		D27748501C6589350085F36F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D27748511C6589350085F36F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D27748521C6589350085F36F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		D27748531C6589350085F36F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1955D7351C645AD1006C680C /* Frameworks */ = {
+		D277480A1C6587F50085F36F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0F6D3081C65F269005BBA29 /* Bolts.framework in Frameworks */,
+				C0F6D3091C65F269005BBA29 /* Parse.framework in Frameworks */,
+				C0F6D30B1C65F269005BBA29 /* ParseFacebookUtilsV4.framework in Frameworks */,
+				C0F6D30C1C65F269005BBA29 /* ParseTwitterUtils.framework in Frameworks */,
+				C0F6D30D1C65F269005BBA29 /* ParseUI.framework in Frameworks */,
+				D27748541C6589350085F36F /* AudioToolbox.framework in Frameworks */,
+				D27748551C6589350085F36F /* CFNetwork.framework in Frameworks */,
+				D27748561C6589350085F36F /* CoreGraphics.framework in Frameworks */,
+				D27748571C6589350085F36F /* CoreLocation.framework in Frameworks */,
+				1BB2DFD71C65C96100974F73 /* ParseFacebookUtils.framework in Frameworks */,
+				940892AC1C65961E00ABD83A /* ParseFacebookUtils.framework in Frameworks */,
+				D27748581C6589350085F36F /* libsqlite3.tbd in Frameworks */,
+				D27748591C6589350085F36F /* libz.tbd in Frameworks */,
+				D277485A1C6589350085F36F /* QuartzCore.framework in Frameworks */,
+				1BB2DFD91C65C96100974F73 /* ParseTwitterUtils.framework in Frameworks */,
+				940892AE1C65961E00ABD83A /* ParseTwitterUtils.framework in Frameworks */,
+				1BB2DFD61C65C96100974F73 /* Parse.framework in Frameworks */,
+				D277485B1C6589350085F36F /* Security.framework in Frameworks */,
+				940892AB1C65961E00ABD83A /* Parse.framework in Frameworks */,
+				1BB2DFD81C65C96100974F73 /* ParseFacebookUtilsV4.framework in Frameworks */,
+				1BB2DFD51C65C96100974F73 /* Bolts.framework in Frameworks */,
+				D277485C1C6589350085F36F /* StoreKit.framework in Frameworks */,
+				940892AD1C65961E00ABD83A /* ParseFacebookUtilsV4.framework in Frameworks */,
+				940892AA1C65961E00ABD83A /* Bolts.framework in Frameworks */,
+				D277485D1C6589350085F36F /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D277481E1C6587F50085F36F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1955D7491C645AD2006C680C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1955D7541C645AD3006C680C /* Frameworks */ = {
+		D27748291C6587F50085F36F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -74,53 +139,81 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1955D72F1C645AD1006C680C = {
+		C0F6D2CB1C65DDC6005BBA29 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1955D73A1C645AD2006C680C /* socialBeacon */,
-				1955D74F1C645AD3006C680C /* socialBeaconTests */,
-				1955D75A1C645AD3006C680C /* socialBeaconUITests */,
-				1955D7391C645AD2006C680C /* Products */,
+				C0F6D2C81C65DDBD005BBA29 /* photo-1444703686981-a3abbc4d4fe3.jpg */,
+				C0F6D2C71C65DDBD005BBA29 /* photo-1433838552652-f9a46b332c40.jpg */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D27748041C6587F50085F36F = {
+			isa = PBXGroup;
+			children = (
+				C0F6D3021C65F269005BBA29 /* Bolts.framework */,
+				C0F6D3031C65F269005BBA29 /* Parse.framework */,
+				C0F6D3051C65F269005BBA29 /* ParseFacebookUtilsV4.framework */,
+				C0F6D3061C65F269005BBA29 /* ParseTwitterUtils.framework */,
+				C0F6D3071C65F269005BBA29 /* ParseUI.framework */,
+				D277484A1C6589350085F36F /* AudioToolbox.framework */,
+				D277484B1C6589350085F36F /* CFNetwork.framework */,
+				D277484C1C6589350085F36F /* CoreGraphics.framework */,
+				D277484D1C6589350085F36F /* CoreLocation.framework */,
+				D277484E1C6589350085F36F /* libsqlite3.tbd */,
+				D277484F1C6589350085F36F /* libz.tbd */,
+				D27748501C6589350085F36F /* QuartzCore.framework */,
+				D27748511C6589350085F36F /* Security.framework */,
+				D27748521C6589350085F36F /* StoreKit.framework */,
+				D27748531C6589350085F36F /* SystemConfiguration.framework */,
+				D277480F1C6587F50085F36F /* socialBeacon */,
+				D27748241C6587F50085F36F /* socialBeaconTests */,
+				D277482F1C6587F50085F36F /* socialBeaconUITests */,
+				D277480E1C6587F50085F36F /* Products */,
+				C0F6D2CB1C65DDC6005BBA29 /* Supporting Files */,
 			);
 			sourceTree = "<group>";
 		};
-		1955D7391C645AD2006C680C /* Products */ = {
+		D277480E1C6587F50085F36F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1955D7381C645AD2006C680C /* socialBeacon.app */,
-				1955D74C1C645AD2006C680C /* socialBeaconTests.xctest */,
-				1955D7571C645AD3006C680C /* socialBeaconUITests.xctest */,
+				D277480D1C6587F50085F36F /* socialBeacon.app */,
+				D27748211C6587F50085F36F /* socialBeaconTests.xctest */,
+				D277482C1C6587F50085F36F /* socialBeaconUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1955D73A1C645AD2006C680C /* socialBeacon */ = {
+		D277480F1C6587F50085F36F /* socialBeacon */ = {
 			isa = PBXGroup;
 			children = (
-				1955D73B1C645AD2006C680C /* AppDelegate.swift */,
-				1955D73D1C645AD2006C680C /* ViewController.swift */,
-				1955D73F1C645AD2006C680C /* Main.storyboard */,
-				1955D7421C645AD2006C680C /* Assets.xcassets */,
-				1955D7441C645AD2006C680C /* LaunchScreen.storyboard */,
-				1955D7471C645AD2006C680C /* Info.plist */,
+				C0F6D3001C65F13F005BBA29 /* ParseInterface.swift */,
+				D27748101C6587F50085F36F /* AppDelegate.swift */,
+				C0F6D2B11C65BE73005BBA29 /* ViewController.swift */,
+				D27748141C6587F50085F36F /* Main.storyboard */,
+				C0F6D2B51C65C143005BBA29 /* ChannelViewController.swift */,
+				C0F6D2B91C65CDB3005BBA29 /* streamViewController.swift */,
+				D27748171C6587F50085F36F /* Assets.xcassets */,
+				D27748191C6587F50085F36F /* LaunchScreen.storyboard */,
+				D277481C1C6587F50085F36F /* Info.plist */,
 			);
 			path = socialBeacon;
 			sourceTree = "<group>";
 		};
-		1955D74F1C645AD3006C680C /* socialBeaconTests */ = {
+		D27748241C6587F50085F36F /* socialBeaconTests */ = {
 			isa = PBXGroup;
 			children = (
-				1955D7501C645AD3006C680C /* socialBeaconTests.swift */,
-				1955D7521C645AD3006C680C /* Info.plist */,
+				D27748251C6587F50085F36F /* socialBeaconTests.swift */,
+				D27748271C6587F50085F36F /* Info.plist */,
 			);
 			path = socialBeaconTests;
 			sourceTree = "<group>";
 		};
-		1955D75A1C645AD3006C680C /* socialBeaconUITests */ = {
+		D277482F1C6587F50085F36F /* socialBeaconUITests */ = {
 			isa = PBXGroup;
 			children = (
-				1955D75B1C645AD3006C680C /* socialBeaconUITests.swift */,
-				1955D75D1C645AD3006C680C /* Info.plist */,
+				D27748301C6587F50085F36F /* socialBeaconUITests.swift */,
+				D27748321C6587F50085F36F /* Info.plist */,
 			);
 			path = socialBeaconUITests;
 			sourceTree = "<group>";
@@ -128,13 +221,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1955D7371C645AD1006C680C /* socialBeacon */ = {
+		D277480C1C6587F50085F36F /* socialBeacon */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1955D7601C645AD3006C680C /* Build configuration list for PBXNativeTarget "socialBeacon" */;
+			buildConfigurationList = D27748351C6587F50085F36F /* Build configuration list for PBXNativeTarget "socialBeacon" */;
 			buildPhases = (
-				1955D7341C645AD1006C680C /* Sources */,
-				1955D7351C645AD1006C680C /* Frameworks */,
-				1955D7361C645AD1006C680C /* Resources */,
+				D27748091C6587F50085F36F /* Sources */,
+				D277480A1C6587F50085F36F /* Frameworks */,
+				D277480B1C6587F50085F36F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -142,69 +235,72 @@
 			);
 			name = socialBeacon;
 			productName = socialBeacon;
-			productReference = 1955D7381C645AD2006C680C /* socialBeacon.app */;
+			productReference = D277480D1C6587F50085F36F /* socialBeacon.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1955D74B1C645AD2006C680C /* socialBeaconTests */ = {
+		D27748201C6587F50085F36F /* socialBeaconTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1955D7631C645AD3006C680C /* Build configuration list for PBXNativeTarget "socialBeaconTests" */;
+			buildConfigurationList = D27748381C6587F50085F36F /* Build configuration list for PBXNativeTarget "socialBeaconTests" */;
 			buildPhases = (
-				1955D7481C645AD2006C680C /* Sources */,
-				1955D7491C645AD2006C680C /* Frameworks */,
-				1955D74A1C645AD2006C680C /* Resources */,
+				D277481D1C6587F50085F36F /* Sources */,
+				D277481E1C6587F50085F36F /* Frameworks */,
+				D277481F1C6587F50085F36F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1955D74E1C645AD3006C680C /* PBXTargetDependency */,
+				D27748231C6587F50085F36F /* PBXTargetDependency */,
 			);
 			name = socialBeaconTests;
 			productName = socialBeaconTests;
-			productReference = 1955D74C1C645AD2006C680C /* socialBeaconTests.xctest */;
+			productReference = D27748211C6587F50085F36F /* socialBeaconTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		1955D7561C645AD3006C680C /* socialBeaconUITests */ = {
+		D277482B1C6587F50085F36F /* socialBeaconUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1955D7661C645AD3006C680C /* Build configuration list for PBXNativeTarget "socialBeaconUITests" */;
+			buildConfigurationList = D277483B1C6587F50085F36F /* Build configuration list for PBXNativeTarget "socialBeaconUITests" */;
 			buildPhases = (
-				1955D7531C645AD3006C680C /* Sources */,
-				1955D7541C645AD3006C680C /* Frameworks */,
-				1955D7551C645AD3006C680C /* Resources */,
+				D27748281C6587F50085F36F /* Sources */,
+				D27748291C6587F50085F36F /* Frameworks */,
+				D277482A1C6587F50085F36F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1955D7591C645AD3006C680C /* PBXTargetDependency */,
+				D277482E1C6587F50085F36F /* PBXTargetDependency */,
 			);
 			name = socialBeaconUITests;
 			productName = socialBeaconUITests;
-			productReference = 1955D7571C645AD3006C680C /* socialBeaconUITests.xctest */;
+			productReference = D277482C1C6587F50085F36F /* socialBeaconUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1955D7301C645AD1006C680C /* Project object */ = {
+		D27748051C6587F50085F36F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
-				ORGANIZATIONNAME = DreamCode;
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = cmu;
 				TargetAttributes = {
-					1955D7371C645AD1006C680C = {
-						CreatedOnToolsVersion = 7.2;
+					D277480C1C6587F50085F36F = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = Z8HC6H2EVG;
 					};
-					1955D74B1C645AD2006C680C = {
-						CreatedOnToolsVersion = 7.2;
-						TestTargetID = 1955D7371C645AD1006C680C;
+					D27748201C6587F50085F36F = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = Z6S3D8GCKZ;
+						TestTargetID = D277480C1C6587F50085F36F;
 					};
-					1955D7561C645AD3006C680C = {
-						CreatedOnToolsVersion = 7.2;
-						TestTargetID = 1955D7371C645AD1006C680C;
+					D277482B1C6587F50085F36F = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = Z6S3D8GCKZ;
+						TestTargetID = D277480C1C6587F50085F36F;
 					};
 				};
 			};
-			buildConfigurationList = 1955D7331C645AD1006C680C /* Build configuration list for PBXProject "socialBeacon" */;
+			buildConfigurationList = D27748081C6587F50085F36F /* Build configuration list for PBXProject "socialBeacon" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -212,37 +308,39 @@
 				en,
 				Base,
 			);
-			mainGroup = 1955D72F1C645AD1006C680C;
-			productRefGroup = 1955D7391C645AD2006C680C /* Products */;
+			mainGroup = D27748041C6587F50085F36F;
+			productRefGroup = D277480E1C6587F50085F36F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1955D7371C645AD1006C680C /* socialBeacon */,
-				1955D74B1C645AD2006C680C /* socialBeaconTests */,
-				1955D7561C645AD3006C680C /* socialBeaconUITests */,
+				D277480C1C6587F50085F36F /* socialBeacon */,
+				D27748201C6587F50085F36F /* socialBeaconTests */,
+				D277482B1C6587F50085F36F /* socialBeaconUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1955D7361C645AD1006C680C /* Resources */ = {
+		D277480B1C6587F50085F36F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1955D7461C645AD2006C680C /* LaunchScreen.storyboard in Resources */,
-				1955D7431C645AD2006C680C /* Assets.xcassets in Resources */,
-				1955D7411C645AD2006C680C /* Main.storyboard in Resources */,
+				D277481B1C6587F50085F36F /* LaunchScreen.storyboard in Resources */,
+				C0F6D2C91C65DDBD005BBA29 /* photo-1433838552652-f9a46b332c40.jpg in Resources */,
+				D27748181C6587F50085F36F /* Assets.xcassets in Resources */,
+				D27748161C6587F50085F36F /* Main.storyboard in Resources */,
+				C0F6D2CA1C65DDBD005BBA29 /* photo-1444703686981-a3abbc4d4fe3.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1955D74A1C645AD2006C680C /* Resources */ = {
+		D277481F1C6587F50085F36F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1955D7551C645AD3006C680C /* Resources */ = {
+		D277482A1C6587F50085F36F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -252,59 +350,62 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1955D7341C645AD1006C680C /* Sources */ = {
+		D27748091C6587F50085F36F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1955D73E1C645AD2006C680C /* ViewController.swift in Sources */,
-				1955D73C1C645AD2006C680C /* AppDelegate.swift in Sources */,
+				C0F6D2BA1C65CDB3005BBA29 /* streamViewController.swift in Sources */,
+				C0F6D3011C65F13F005BBA29 /* ParseInterface.swift in Sources */,
+				C0F6D2B21C65BE73005BBA29 /* ViewController.swift in Sources */,
+				C0F6D2B61C65C143005BBA29 /* ChannelViewController.swift in Sources */,
+				D27748111C6587F50085F36F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1955D7481C645AD2006C680C /* Sources */ = {
+		D277481D1C6587F50085F36F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1955D7511C645AD3006C680C /* socialBeaconTests.swift in Sources */,
+				D27748261C6587F50085F36F /* socialBeaconTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1955D7531C645AD3006C680C /* Sources */ = {
+		D27748281C6587F50085F36F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1955D75C1C645AD3006C680C /* socialBeaconUITests.swift in Sources */,
+				D27748311C6587F50085F36F /* socialBeaconUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1955D74E1C645AD3006C680C /* PBXTargetDependency */ = {
+		D27748231C6587F50085F36F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1955D7371C645AD1006C680C /* socialBeacon */;
-			targetProxy = 1955D74D1C645AD3006C680C /* PBXContainerItemProxy */;
+			target = D277480C1C6587F50085F36F /* socialBeacon */;
+			targetProxy = D27748221C6587F50085F36F /* PBXContainerItemProxy */;
 		};
-		1955D7591C645AD3006C680C /* PBXTargetDependency */ = {
+		D277482E1C6587F50085F36F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1955D7371C645AD1006C680C /* socialBeacon */;
-			targetProxy = 1955D7581C645AD3006C680C /* PBXContainerItemProxy */;
+			target = D277480C1C6587F50085F36F /* socialBeacon */;
+			targetProxy = D277482D1C6587F50085F36F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1955D73F1C645AD2006C680C /* Main.storyboard */ = {
+		D27748141C6587F50085F36F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1955D7401C645AD2006C680C /* Base */,
+				D27748151C6587F50085F36F /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		1955D7441C645AD2006C680C /* LaunchScreen.storyboard */ = {
+		D27748191C6587F50085F36F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1955D7451C645AD2006C680C /* Base */,
+				D277481A1C6587F50085F36F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -312,7 +413,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1955D75E1C645AD3006C680C /* Debug */ = {
+		D27748331C6587F50085F36F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -348,7 +449,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -357,7 +458,7 @@
 			};
 			name = Debug;
 		};
-		1955D75F1C645AD3006C680C /* Release */ = {
+		D27748341C6587F50085F36F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -387,7 +488,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -395,70 +496,86 @@
 			};
 			name = Release;
 		};
-		1955D7611C645AD3006C680C /* Debug */ = {
+		D27748361C6587F50085F36F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/socialBeacon",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = socialBeacon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = DreamCode.socialBeacon;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.cmu.dreamCode.socialBeacon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
-		1955D7621C645AD3006C680C /* Release */ = {
+		D27748371C6587F50085F36F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/socialBeacon",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = socialBeacon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = DreamCode.socialBeacon;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.cmu.dreamCode.socialBeacon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
-		1955D7641C645AD3006C680C /* Debug */ = {
+		D27748391C6587F50085F36F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = socialBeaconTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = DreamCode.socialBeaconTests;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.cmu.socialBeaconTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/socialBeacon.app/socialBeacon";
 			};
 			name = Debug;
 		};
-		1955D7651C645AD3006C680C /* Release */ = {
+		D277483A1C6587F50085F36F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = socialBeaconTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = DreamCode.socialBeaconTests;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.cmu.socialBeaconTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/socialBeacon.app/socialBeacon";
 			};
 			name = Release;
 		};
-		1955D7671C645AD3006C680C /* Debug */ = {
+		D277483C1C6587F50085F36F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = socialBeaconUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = DreamCode.socialBeaconUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.cmu.socialBeaconUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = socialBeacon;
 				USES_XCTRUNNER = YES;
 			};
 			name = Debug;
 		};
-		1955D7681C645AD3006C680C /* Release */ = {
+		D277483D1C6587F50085F36F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = socialBeaconUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = DreamCode.socialBeaconUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.cmu.socialBeaconUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = socialBeacon;
 				USES_XCTRUNNER = YES;
@@ -468,40 +585,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1955D7331C645AD1006C680C /* Build configuration list for PBXProject "socialBeacon" */ = {
+		D27748081C6587F50085F36F /* Build configuration list for PBXProject "socialBeacon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1955D75E1C645AD3006C680C /* Debug */,
-				1955D75F1C645AD3006C680C /* Release */,
+				D27748331C6587F50085F36F /* Debug */,
+				D27748341C6587F50085F36F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1955D7601C645AD3006C680C /* Build configuration list for PBXNativeTarget "socialBeacon" */ = {
+		D27748351C6587F50085F36F /* Build configuration list for PBXNativeTarget "socialBeacon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1955D7611C645AD3006C680C /* Debug */,
-				1955D7621C645AD3006C680C /* Release */,
+				D27748361C6587F50085F36F /* Debug */,
+				D27748371C6587F50085F36F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		1955D7631C645AD3006C680C /* Build configuration list for PBXNativeTarget "socialBeaconTests" */ = {
+		D27748381C6587F50085F36F /* Build configuration list for PBXNativeTarget "socialBeaconTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1955D7641C645AD3006C680C /* Debug */,
-				1955D7651C645AD3006C680C /* Release */,
+				D27748391C6587F50085F36F /* Debug */,
+				D277483A1C6587F50085F36F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		1955D7661C645AD3006C680C /* Build configuration list for PBXNativeTarget "socialBeaconUITests" */ = {
+		D277483B1C6587F50085F36F /* Build configuration list for PBXNativeTarget "socialBeaconUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1955D7671C645AD3006C680C /* Debug */,
-				1955D7681C645AD3006C680C /* Release */,
+				D277483C1C6587F50085F36F /* Debug */,
+				D277483D1C6587F50085F36F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 1955D7301C645AD1006C680C /* Project object */;
+	rootObject = D27748051C6587F50085F36F /* Project object */;
 }

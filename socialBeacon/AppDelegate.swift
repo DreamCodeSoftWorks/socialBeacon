@@ -2,20 +2,22 @@
 //  AppDelegate.swift
 //  socialBeacon
 //
-//  Created by Omar Skalli on 2/4/16.
-//  Copyright © 2016 DreamCode. All rights reserved.
+//  Created by Arjun Hans on 2/5/16.
+//  Copyright © 2016 cmu. All rights reserved.
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
-    //Initial Commit message
-    
+
+
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+            Parse.enableLocalDatastore()
+            Parse.setApplicationId("vMbH2IEMsBppsj3AuCE6IphvZzwa8L3xxxNwUwGe", clientKey: "lW2fhJ5VlNEOtdWTjvICkp2WwP0HyX6hHAk2jOyK")
         // Override point for customization after application launch.
         return true
     }

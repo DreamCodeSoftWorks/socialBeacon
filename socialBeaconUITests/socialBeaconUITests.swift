@@ -2,8 +2,8 @@
 //  socialBeaconUITests.swift
 //  socialBeaconUITests
 //
-//  Created by Omar Skalli on 2/4/16.
-//  Copyright © 2016 DreamCode. All rights reserved.
+//  Created by Arjun Hans on 2/5/16.
+//  Copyright © 2016 cmu. All rights reserved.
 //
 
 import XCTest
