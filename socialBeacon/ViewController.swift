@@ -11,10 +11,11 @@ import AVFoundation
 
 class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
     
+    @IBOutlet var chirpLabel: UILabel!
     @IBOutlet var RecordBTN: UIButton!
     
     var recordingSession: AVAudioSession!
-    var whistleRecorder: AVAudioRecorder!
+    var chirpRecorder: AVAudioRecorder!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,11 +41,11 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
     }
     
     func loadRecordingUI() {
-        
+        chirpLabel.text = "Ready to chirp"
     }
     
     func loadFailUI() {
-        
+        chirpLabel.text = "An error has occurred :("
     }
     
     override func didReceiveMemoryWarning() {
@@ -80,17 +81,17 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
         RecordBTN.setTitle("Stop", forState: .Normal)
         
         do {
-            whistleRecorder = try AVAudioRecorder(URL: audioURL, settings: settings)
-            whistleRecorder.delegate = self
-            whistleRecorder.record()
+            chirpRecorder = try AVAudioRecorder(URL: audioURL, settings: settings)
+            chirpRecorder.delegate = self
+            chirpRecorder.record()
         } catch {
             finishRecording(success: false)
         }
     }
     
     func finishRecording(success success: Bool) {
-        whistleRecorder.stop()
-        whistleRecorder = nil
+        chirpRecorder.stop()
+        chirpRecorder = nil
         
         if success {
             RecordBTN.setTitle("Tap to Re-record", forState: .Normal)
@@ -106,7 +107,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
     }
 
     @IBAction func Record(sender: UIButton) {
-        if whistleRecorder == nil {
+        if chirpRecorder == nil {
             startRecording()
         } else {
             finishRecording(success: true)
