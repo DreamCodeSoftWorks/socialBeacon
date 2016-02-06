@@ -12,14 +12,17 @@ import AVFoundation
 
 class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
     
+    @IBOutlet var Timer: UILabel!
     @IBOutlet var chirpLabel: UILabel!
     @IBOutlet var RecordBTN: UIButton!
     @IBOutlet var PlaybackBTN: UIButton!
     @IBOutlet var ProgressBar: UIProgressView!
+    @IBOutlet var UploadBTN: UIButton!
     
     var recordingSession: AVAudioSession!
     var chirpRecorder: AVAudioRecorder!
     var chirpPlayer: AVAudioPlayer!
+    var streamTitle: String?
     
     let audioURL = RecordViewController.getFileURL()
     
@@ -75,7 +78,7 @@ class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
     
     func startRecording() {
         
-        print(audioURL.absoluteString)
+        //print(audioURL.absoluteString)
         
         let settings = [
             AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
@@ -102,7 +105,6 @@ class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         if success {
             chirpLabel.text = "Chirped"
             RecordBTN.setTitle("Tap to Re-record", forState: .Normal)
-            ParseInterface.uploadParseSound("Party Channel", recordingName: "chirp.m4a")
         } else {
             RecordBTN.setTitle("Tap to Record", forState: .Normal)
         }
@@ -156,5 +158,9 @@ class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         if chirpPlayer == nil {
             startPlayback()
         }
+    }
+    
+    @IBAction func Upload(sender: UIButton) {
+        ParseInterface.uploadParseSound(streamTitle!, recordingName: "chirp.m4a")
     }
 }
