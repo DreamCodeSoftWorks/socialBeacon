@@ -56,7 +56,12 @@ class ParseInterface {
     
     static func playChannelSounds(channelSoundObjs: [PFObject]) {
         print("Playing sounds \(channelSoundObjs.count)")
-        for channelSoundObject in channelSoundObjs {
+        let url = NSURL(string: "https://files.parsetfss.com/95d6bbb4-ff13-4668-ae8e-27300694cf81/tfss-d3ba6911-ca8b-493d-a321-6f424dbb99b7-1-01%20Waiting%20On%20The%20World%20To%20Change.mp3")
+        let playerItem = AVPlayerItem(URL: url!)
+        let player = AVPlayer(playerItem: playerItem)
+        player.play()
+        
+        /*for channelSoundObject in channelSoundObjs {
             if let channelSoundFile = channelSoundObject["sound"] as? PFFile {
                 if let soundURL = NSURL(string: channelSoundFile.url!) {
                     print("Sound at \(soundURL)")
@@ -65,6 +70,6 @@ class ParseInterface {
                     audioPlayer.play()
                 }
             }
-        }
+        }*/
     }
 }
