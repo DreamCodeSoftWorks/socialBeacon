@@ -26,7 +26,7 @@ class PlayAudio {
         } catch {
             // Could not load the file
             print("Could not load")
-            throw error
+            throw AudioError.FileNotFound
         }
     }
 }
