@@ -29,7 +29,7 @@ class streamViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = streamTitle
-        //ParseInterface.downloadChannelSounds(streamTitle!, channelSounds: channelSounds!)
+        ParseInterface.downloadChannelSounds(streamTitle!, channelSounds: channelSounds!)
     }
 
     override func didReceiveMemoryWarning() {
