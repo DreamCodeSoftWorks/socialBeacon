@@ -138,6 +138,9 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6f-98-gz0">
                                 <rect key="frame" x="276" y="516" width="49" height="30"/>
                                 <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="recordButton:" destination="uD3-pN-Kqb" eventType="touchUpInside" id="H2x-3h-wxg"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number Of People Listening:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3x-Gz-Erz">
                                 <rect key="frame" x="190" y="397" width="220" height="21"/>
@@ -160,6 +163,9 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPW-pq-awS">
                                 <rect key="frame" x="285" y="478" width="30" height="30"/>
                                 <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playButton:" destination="uD3-pN-Kqb" eventType="touchUpInside" id="Rut-4O-ebq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
