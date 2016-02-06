@@ -33,4 +33,25 @@ class PlayAudio {
             throw AudioError.FileNotFound
         }
     }
+    
+    func preLoadSong(fileName: String, type: String?) throws -> AVAudioPlayer {
+        let path: String = NSBundle.mainBundle().pathForResource(fileName, ofType: type)!
+        let url: NSURL = NSURL(fileURLWithPath: path)
+        
+        do {
+            let bufferedSong = try AVAudioPlayer(contentsOfURL: url)
+            bufferedSong.prepareToPlay()
+            return bufferedSong
+        } catch {
+            throw AudioError.FileNotFound
+        }
+    }
+    
+    func playPreLoadedSong(songPlayer: AVAudioPlayer) {
+        if (audioPlayer != nil && audioPlayer.playing) {
+            audioPlayer.pause()
+        }
+        audioPlayer = songPlayer
+        audioPlayer.play()
+    }
 }
