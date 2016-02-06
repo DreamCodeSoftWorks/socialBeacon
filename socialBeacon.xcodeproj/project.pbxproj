@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D27748111C6587F50085F36F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27748101C6587F50085F36F /* AppDelegate.swift */; };
+		D27748131C6587F50085F36F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27748121C6587F50085F36F /* ViewController.swift */; };
+		D27748161C6587F50085F36F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D27748141C6587F50085F36F /* Main.storyboard */; };
+		D27748181C6587F50085F36F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D27748171C6587F50085F36F /* Assets.xcassets */; };
+		D277481B1C6587F50085F36F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D27748191C6587F50085F36F /* LaunchScreen.storyboard */; };
+		D27748261C6587F50085F36F /* socialBeaconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27748251C6587F50085F36F /* socialBeaconTests.swift */; };
+		D27748311C6587F50085F36F /* socialBeaconUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27748301C6587F50085F36F /* socialBeaconUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D27748221C6587F50085F36F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D27748051C6587F50085F36F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D277480C1C6587F50085F36F;
+			remoteInfo = socialBeacon;
+		};
+		D277482D1C6587F50085F36F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D27748051C6587F50085F36F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D277480C1C6587F50085F36F;
+			remoteInfo = socialBeacon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D277480D1C6587F50085F36F /* socialBeacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = socialBeacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D27748101C6587F50085F36F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D27748121C6587F50085F36F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D27748151C6587F50085F36F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D27748171C6587F50085F36F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D277481A1C6587F50085F36F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D277481C1C6587F50085F36F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D27748211C6587F50085F36F /* socialBeaconTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = socialBeaconTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D27748251C6587F50085F36F /* socialBeaconTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = socialBeaconTests.swift; sourceTree = "<group>"; };
+		D27748271C6587F50085F36F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D277482C1C6587F50085F36F /* socialBeaconUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = socialBeaconUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D27748301C6587F50085F36F /* socialBeaconUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = socialBeaconUITests.swift; sourceTree = "<group>"; };
+		D27748321C6587F50085F36F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D277480A1C6587F50085F36F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D277481E1C6587F50085F36F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D27748291C6587F50085F36F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D27748041C6587F50085F36F = {
+			isa = PBXGroup;
+			children = (
+				D277480F1C6587F50085F36F /* socialBeacon */,
+				D27748241C6587F50085F36F /* socialBeaconTests */,
+				D277482F1C6587F50085F36F /* socialBeaconUITests */,
+				D277480E1C6587F50085F36F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D277480E1C6587F50085F36F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D277480D1C6587F50085F36F /* socialBeacon.app */,
+				D27748211C6587F50085F36F /* socialBeaconTests.xctest */,
+				D277482C1C6587F50085F36F /* socialBeaconUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D277480F1C6587F50085F36F /* socialBeacon */ = {
+			isa = PBXGroup;
+			children = (
+				D27748101C6587F50085F36F /* AppDelegate.swift */,
+				D27748121C6587F50085F36F /* ViewController.swift */,
+				D27748141C6587F50085F36F /* Main.storyboard */,
+				D27748171C6587F50085F36F /* Assets.xcassets */,
+				D27748191C6587F50085F36F /* LaunchScreen.storyboard */,
+				D277481C1C6587F50085F36F /* Info.plist */,
+			);
+			path = socialBeacon;
+			sourceTree = "<group>";
+		};
+		D27748241C6587F50085F36F /* socialBeaconTests */ = {
+			isa = PBXGroup;
+			children = (
+				D27748251C6587F50085F36F /* socialBeaconTests.swift */,
+				D27748271C6587F50085F36F /* Info.plist */,
+			);
+			path = socialBeaconTests;
+			sourceTree = "<group>";
+		};
+		D277482F1C6587F50085F36F /* socialBeaconUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D27748301C6587F50085F36F /* socialBeaconUITests.swift */,
+				D27748321C6587F50085F36F /* Info.plist */,
+			);
+			path = socialBeaconUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D277480C1C6587F50085F36F /* socialBeacon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D27748351C6587F50085F36F /* Build configuration list for PBXNativeTarget "socialBeacon" */;
+			buildPhases = (
+				D27748091C6587F50085F36F /* Sources */,
+				D277480A1C6587F50085F36F /* Frameworks */,
+				D277480B1C6587F50085F36F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = socialBeacon;
+			productName = socialBeacon;
+			productReference = D277480D1C6587F50085F36F /* socialBeacon.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D27748201C6587F50085F36F /* socialBeaconTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D27748381C6587F50085F36F /* Build configuration list for PBXNativeTarget "socialBeaconTests" */;
+			buildPhases = (
+				D277481D1C6587F50085F36F /* Sources */,
+				D277481E1C6587F50085F36F /* Frameworks */,
+				D277481F1C6587F50085F36F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D27748231C6587F50085F36F /* PBXTargetDependency */,
+			);
+			name = socialBeaconTests;
+			productName = socialBeaconTests;
+			productReference = D27748211C6587F50085F36F /* socialBeaconTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D277482B1C6587F50085F36F /* socialBeaconUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D277483B1C6587F50085F36F /* Build configuration list for PBXNativeTarget "socialBeaconUITests" */;
+			buildPhases = (
+				D27748281C6587F50085F36F /* Sources */,
+				D27748291C6587F50085F36F /* Frameworks */,
+				D277482A1C6587F50085F36F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D277482E1C6587F50085F36F /* PBXTargetDependency */,
+			);
+			name = socialBeaconUITests;
+			productName = socialBeaconUITests;
+			productReference = D277482C1C6587F50085F36F /* socialBeaconUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D27748051C6587F50085F36F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = cmu;
+				TargetAttributes = {
+					D277480C1C6587F50085F36F = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = Z6S3D8GCKZ;
+					};
+					D27748201C6587F50085F36F = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = Z6S3D8GCKZ;
+						TestTargetID = D277480C1C6587F50085F36F;
+					};
+					D277482B1C6587F50085F36F = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = Z6S3D8GCKZ;
+						TestTargetID = D277480C1C6587F50085F36F;
+					};
+				};
+			};
+			buildConfigurationList = D27748081C6587F50085F36F /* Build configuration list for PBXProject "socialBeacon" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D27748041C6587F50085F36F;
+			productRefGroup = D277480E1C6587F50085F36F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D277480C1C6587F50085F36F /* socialBeacon */,
+				D27748201C6587F50085F36F /* socialBeaconTests */,
+				D277482B1C6587F50085F36F /* socialBeaconUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D277480B1C6587F50085F36F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D277481B1C6587F50085F36F /* LaunchScreen.storyboard in Resources */,
+				D27748181C6587F50085F36F /* Assets.xcassets in Resources */,
+				D27748161C6587F50085F36F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D277481F1C6587F50085F36F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D277482A1C6587F50085F36F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D27748091C6587F50085F36F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D27748131C6587F50085F36F /* ViewController.swift in Sources */,
+				D27748111C6587F50085F36F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D277481D1C6587F50085F36F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D27748261C6587F50085F36F /* socialBeaconTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D27748281C6587F50085F36F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D27748311C6587F50085F36F /* socialBeaconUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D27748231C6587F50085F36F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D277480C1C6587F50085F36F /* socialBeacon */;
+			targetProxy = D27748221C6587F50085F36F /* PBXContainerItemProxy */;
+		};
+		D277482E1C6587F50085F36F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D277480C1C6587F50085F36F /* socialBeacon */;
+			targetProxy = D277482D1C6587F50085F36F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D27748141C6587F50085F36F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D27748151C6587F50085F36F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D27748191C6587F50085F36F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D277481A1C6587F50085F36F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D27748331C6587F50085F36F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D27748341C6587F50085F36F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D27748361C6587F50085F36F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = socialBeacon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.cmu.socialBeacon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D27748371C6587F50085F36F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = socialBeacon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.cmu.socialBeacon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D27748391C6587F50085F36F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = socialBeaconTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.cmu.socialBeaconTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/socialBeacon.app/socialBeacon";
+			};
+			name = Debug;
+		};
+		D277483A1C6587F50085F36F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = socialBeaconTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.cmu.socialBeaconTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/socialBeacon.app/socialBeacon";
+			};
+			name = Release;
+		};
+		D277483C1C6587F50085F36F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = socialBeaconUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.cmu.socialBeaconUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = socialBeacon;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		D277483D1C6587F50085F36F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = socialBeaconUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.cmu.socialBeaconUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = socialBeacon;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D27748081C6587F50085F36F /* Build configuration list for PBXProject "socialBeacon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D27748331C6587F50085F36F /* Debug */,
+				D27748341C6587F50085F36F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D27748351C6587F50085F36F /* Build configuration list for PBXNativeTarget "socialBeacon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D27748361C6587F50085F36F /* Debug */,
+				D27748371C6587F50085F36F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D27748381C6587F50085F36F /* Build configuration list for PBXNativeTarget "socialBeaconTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D27748391C6587F50085F36F /* Debug */,
+				D277483A1C6587F50085F36F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D277483B1C6587F50085F36F /* Build configuration list for PBXNativeTarget "socialBeaconUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D277483C1C6587F50085F36F /* Debug */,
+				D277483D1C6587F50085F36F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D27748051C6587F50085F36F /* Project object */;
+}
