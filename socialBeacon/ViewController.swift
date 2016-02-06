@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  socialBeacon
 //
-//  Created by Arjun Hans on 2/5/16.
+//  Created by Omar Skalli on 2/5/16.
 //  Copyright © 2016 cmu. All rights reserved.
 //
 
@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBAction func loginButton(sender: UIButton) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
