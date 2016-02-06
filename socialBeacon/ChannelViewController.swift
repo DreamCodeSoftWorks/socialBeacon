@@ -13,24 +13,21 @@ class ChannelTableViewController: UITableViewController {
     var channelArray: [String] = []
     var selected = 0
     var selectedTwitterTrend : String?
-    
-    var channelRefreshControl: UIRefreshControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        channelArray = ["Super Bowl 50", "Democratic Debate", "Party Channel", "Local Channel"]
+        ParseInterface.pullParseChannel(self)
         tableView.reloadData()
         
-        self.refreshControl = UIRefreshControl()
-        self.refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
         self.refreshControl?.addTarget(self, action: "refreshChannels:", forControlEvents: UIControlEvents.ValueChanged)
-        self.tableView.addSubview(refreshControl!)
     }
     
     func refreshChannels(refreshControl: UIRefreshControl) {
         //Pull new channel list from parse
+        print("Pulling new channel list")
+        ParseInterface.pullParseChannel(self)
         
+        print(channelArray)
         self.tableView.reloadData()
         refreshControl.endRefreshing()
     }
@@ -38,6 +35,7 @@ class ChannelTableViewController: UITableViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        ParseInterface.pullParseChannel(self)
         tableView.reloadData()
     }
 

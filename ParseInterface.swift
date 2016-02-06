@@ -25,6 +25,39 @@ class ParseInterface {
         }
     }
     
+    static func pullParseChannel(tableView : ChannelTableViewController) {
+        let query = PFQuery(className: "channelSound")
+        query.findObjectsInBackgroundWithBlock( { (objects, error) -> Void in
+            if error == nil {
+                for object in objects! {
+                    let channelName: String = object["channelName"] as! String
+                    if !tableView.channelArray.contains(channelName) {
+                        tableView.channelArray.append(channelName)
+                    }
+                }
+            }
+            tableView.tableView.reloadData()
+        })
+    }
+    
+    /*
+    static func pullParseChannel(tableView : ChannelTableViewController) {
+        let query = PFQuery(className: "channelSound")
+        query.findObjectsInBackgroundWithTarget(<#T##target: AnyObject?##AnyObject?#>, selector: <#T##Selector#>)
+        do {
+            let objects = try query.findObjects()
+            for object in objects {
+                let channelName: String = object["channelName"] as! String
+                if !tableView.channelArray.contains(channelName) {
+                    tableView.channelArray.append(channelName)
+                }
+            }
+        } catch {
+            print("Couldn't download content")
+        }
+    }
+    */
+    
     // Upload the recording to the Parse Server under the given channel
     static func uploadParseSound(channelName : String, recordingName : String) {
         print("Uploading sound \(recordingName) for channel \(channelName)")
