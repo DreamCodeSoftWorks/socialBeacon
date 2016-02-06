@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		940892A11C65923400ABD83A /* recordChirp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940892A01C65923400ABD83A /* recordChirp.swift */; };
+		940892A11C65923400ABD83A /* RecordAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940892A01C65923400ABD83A /* RecordAudio.swift */; };
 		940892AA1C65961E00ABD83A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940892A41C65961E00ABD83A /* Bolts.framework */; };
 		940892AB1C65961E00ABD83A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940892A51C65961E00ABD83A /* Parse.framework */; };
 		940892AC1C65961E00ABD83A /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940892A61C65961E00ABD83A /* ParseFacebookUtils.framework */; };
@@ -58,7 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		940892A01C65923400ABD83A /* recordChirp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recordChirp.swift; sourceTree = "<group>"; };
+		940892A01C65923400ABD83A /* RecordAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordAudio.swift; sourceTree = "<group>"; };
 		940892A41C65961E00ABD83A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		940892A51C65961E00ABD83A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		940892A61C65961E00ABD83A /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
@@ -189,7 +189,7 @@
 		D277480F1C6587F50085F36F /* socialBeacon */ = {
 			isa = PBXGroup;
 			children = (
-				940892A01C65923400ABD83A /* recordChirp.swift */,
+				940892A01C65923400ABD83A /* RecordAudio.swift */,
 				940892E61C65AF4E00ABD83A /* PlayAudio.swift */,
 				D27748101C6587F50085F36F /* AppDelegate.swift */,
 				D27748121C6587F50085F36F /* ViewController.swift */,
@@ -353,7 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D27748131C6587F50085F36F /* ViewController.swift in Sources */,
-				940892A11C65923400ABD83A /* recordChirp.swift in Sources */,
+				940892A11C65923400ABD83A /* RecordAudio.swift in Sources */,
 				940892E71C65AF4E00ABD83A /* PlayAudio.swift in Sources */,
 				D27748111C6587F50085F36F /* AppDelegate.swift in Sources */,
 			);
