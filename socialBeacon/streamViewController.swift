@@ -14,13 +14,14 @@ import Parse
 public var AudioPlayer = AVPlayer()
 public var SelectedSongNumber = Int()
 
-class StreamViewController: UIViewController {
+class streamViewController: UIViewController {
     
     var streamTitle: String?
     var channelSounds: [PFObject]?
 
     @IBAction func playButton(sender: AnyObject) {
-        ParseInterface.playChannelSounds(channelSounds!)
+        //ParseInterface.playChannelSounds(channelSounds!)
+
     }
     @IBAction func recordButton(sender: AnyObject) {
         
@@ -28,7 +29,7 @@ class StreamViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = streamTitle
-        ParseInterface.downloadChannelSounds(streamTitle!, channelSounds: channelSounds!)
+        //ParseInterface.downloadChannelSounds(streamTitle!, channelSounds: channelSounds!)
     }
 
     override func didReceiveMemoryWarning() {

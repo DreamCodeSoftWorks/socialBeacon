@@ -135,17 +135,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6f-98-gz0">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6f-98-gz0">
                                 <rect key="frame" x="276" y="516" width="49" height="30"/>
                                 <state key="normal" title="Record"/>
-                                <connections>
-                                    <action selector="recordButton:" destination="uD3-pN-Kqb" eventType="touchUpInside" id="H2x-3h-wxg"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number Of People Listening:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3x-Gz-Erz">
                                 <rect key="frame" x="190" y="397" width="220" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="KzW-u8-tJo"/>
+                                    <constraint firstAttribute="height" constant="21" id="qWT-6U-gqn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -154,32 +151,28 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200,787" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekR-aF-2eh">
                                 <rect key="frame" x="268" y="426" width="64" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="64" id="mU2-K7-K5P"/>
+                                    <constraint firstAttribute="width" constant="64" id="XUM-Qh-8MQ"/>
+                                    <constraint firstAttribute="height" constant="21" id="xmn-Wc-8tX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPW-pq-awS">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPW-pq-awS">
                                 <rect key="frame" x="285" y="478" width="30" height="30"/>
                                 <state key="normal" title="Play"/>
-                                <connections>
-                                    <action selector="playButton:" destination="uD3-pN-Kqb" eventType="touchUpInside" id="Rut-4O-ebq"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="l6f-98-gz0" firstAttribute="top" secondItem="ekR-aF-2eh" secondAttribute="bottom" constant="31" id="4mM-xf-xvm"/>
-                            <constraint firstItem="l6f-98-gz0" firstAttribute="centerX" secondItem="b6O-Xe-CUU" secondAttribute="centerX" id="7uj-B6-QCp"/>
-                            <constraint firstItem="ekR-aF-2eh" firstAttribute="centerX" secondItem="u3x-Gz-Erz" secondAttribute="centerX" id="Huz-Vy-3Gx"/>
-                            <constraint firstItem="EPW-pq-awS" firstAttribute="top" secondItem="u3x-Gz-Erz" secondAttribute="bottom" constant="60" id="ILR-pf-7wv"/>
-                            <constraint firstItem="ekR-aF-2eh" firstAttribute="top" secondItem="u3x-Gz-Erz" secondAttribute="bottom" constant="8" symbolic="YES" id="L3D-NR-Ylh"/>
-                            <constraint firstItem="l6f-98-gz0" firstAttribute="top" secondItem="EPW-pq-awS" secondAttribute="top" id="SFr-28-xe5"/>
-                            <constraint firstItem="l6f-98-gz0" firstAttribute="leading" secondItem="EPW-pq-awS" secondAttribute="trailing" constant="71" id="VZh-Ms-scv"/>
-                            <constraint firstItem="u3x-Gz-Erz" firstAttribute="centerX" secondItem="b6O-Xe-CUU" secondAttribute="centerX" id="Wnz-bJ-JKt"/>
-                            <constraint firstItem="EPW-pq-awS" firstAttribute="centerX" secondItem="b6O-Xe-CUU" secondAttribute="centerX" id="eqE-B3-xBN"/>
-                            <constraint firstItem="Bhh-F9-WXh" firstAttribute="top" secondItem="EPW-pq-awS" secondAttribute="bottom" constant="92" id="mWa-xL-m0S"/>
+                            <constraint firstItem="Bhh-F9-WXh" firstAttribute="top" secondItem="l6f-98-gz0" secondAttribute="bottom" constant="54" id="4fw-3w-PUi"/>
+                            <constraint firstItem="ekR-aF-2eh" firstAttribute="top" secondItem="u3x-Gz-Erz" secondAttribute="bottom" constant="8" symbolic="YES" id="5b8-18-osV"/>
+                            <constraint firstItem="EPW-pq-awS" firstAttribute="top" secondItem="ekR-aF-2eh" secondAttribute="bottom" constant="31" id="YX1-F0-b9E"/>
+                            <constraint firstItem="l6f-98-gz0" firstAttribute="top" secondItem="EPW-pq-awS" secondAttribute="bottom" constant="8" symbolic="YES" id="fx7-MY-DXc"/>
+                            <constraint firstItem="ekR-aF-2eh" firstAttribute="centerX" secondItem="b6O-Xe-CUU" secondAttribute="centerX" id="i4Q-dE-4bV"/>
+                            <constraint firstItem="l6f-98-gz0" firstAttribute="centerX" secondItem="EPW-pq-awS" secondAttribute="centerX" id="ju9-PX-FOP"/>
+                            <constraint firstItem="EPW-pq-awS" firstAttribute="centerX" secondItem="ekR-aF-2eh" secondAttribute="centerX" id="taS-eY-UJJ"/>
+                            <constraint firstItem="ekR-aF-2eh" firstAttribute="centerX" secondItem="u3x-Gz-Erz" secondAttribute="centerX" id="tsM-00-sGO"/>
                         </constraints>
                     </view>
                 </viewController>
