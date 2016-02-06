@@ -17,54 +17,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iqy-D9-yy8">
-                                <rect key="frame" x="399" y="285" width="62" height="30"/>
-                                <state key="normal" title="Playback"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="128" y="308" width="145" height="30"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="165" y="323" width="62" height="30"/>
-                                </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0Z-oT-OJu">
-                                <rect key="frame" x="172" y="285" width="49" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58E-I7-JeR">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Record"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="57" y="189" width="49" height="30"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="176" y="199" width="49" height="30"/>
+                                    <rect key="frame" x="176" y="385" width="49" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="Record:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aup-Ii-lhP"/>
+                                    <action selector="Record:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lbj-em-se9"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uxq-yl-Z3S">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="7"/>
-                                <state key="normal" title="Button"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="435" width="400" height="132"/>
-                                </variation>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="Uxq-yl-Z3S"/>
+                                <exclude reference="58E-I7-JeR"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="Uxq-yl-Z3S"/>
+                                <include reference="58E-I7-JeR"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="PlayBTN" destination="Iqy-D9-yy8" id="3qi-oh-TZo"/>
-                        <outlet property="RecordBTN" destination="i0Z-oT-OJu" id="9Tu-o3-39u"/>
-                        <outlet property="filelabel" destination="Uxq-yl-Z3S" id="2EI-Md-jVJ"/>
+                        <outlet property="RecordBTN" destination="58E-I7-JeR" id="esV-03-HLC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

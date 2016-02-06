@@ -10,43 +10,18 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
-
+    
     @IBOutlet var RecordBTN: UIButton!
-    @IBOutlet var PlayBTN: UIButton!
-    @IBOutlet var filelabel: UIButton!
-
     
-    var soundRecorder: AVAudioRecorder!
     var recordingSession: AVAudioSession!
-    
-    var fileName = "audioFile.m4a"
-    
-    let recordSettings =
-    [
-        AVFormatIDKey : Int(kAudioFormatMPEGLayer3),
-        AVEncoderBitRateKey: 320000 as NSNumber,
-        AVNumberOfChannelsKey: 1 as NSNumber,
-        AVEncoderAudioQualityKey: AVAudioQuality.High.rawValue as NSNumber,
-        AVSampleRateKey: 44100.0 as NSNumber,
-    ]
+    var whistleRecorder: AVAudioRecorder!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        PlayBTN.enabled = false
         // Do any additional setup after loading the view, typically from a nib.
-        setupRecorder()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
-    
-    func setupRecorder(){
+        
         recordingSession = AVAudioSession.sharedInstance()
-    
+        
         do {
             try recordingSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
             try recordingSession.setActive(true)
@@ -63,59 +38,78 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
             self.loadFailUI()
         }
     }
-
+    
     func loadRecordingUI() {
-    
+        
     }
-
+    
     func loadFailUI() {
-    
-    }
-    
-    @IBAction func Record(sender: UIButton) {
         
-        if sender.titleLabel?.text == "Record"{
-            
-            startRecording("Downloads", duration: 10.0)
-            PlayBTN.enabled = false
-            sender.setTitle("Stop", forState: .Normal)
-            
-        } else {
-            if soundRecorder?.recording == true {
-                soundRecorder?.stop()
-            }
-            sender.setTitle("Record", forState: .Normal)
-            
-        }
     }
     
-    func getDocumentsDirectory() -> NSString {
-        let paths = NSSearchPathForDirectoriesInDomains(.DownloadsDirectory, .UserDomainMask, true) as [String]
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    class func getDocumentsDirectory() -> NSString {
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as [String]
         let documentsDirectory = paths[0]
-        
-        print("documentsDirectory")
         return documentsDirectory
     }
     
-    func getClipURL(recordingName : String) -> NSURL {
-        let audioFilename = getDocumentsDirectory().stringByAppendingPathComponent(recordingName + ".m4a")
+    class func getFileURL() -> NSURL {
+        let audioFilename = getDocumentsDirectory().stringByAppendingPathComponent("chirp.m4a")
         let audioURL = NSURL(fileURLWithPath: audioFilename)
+        
         return audioURL
     }
     
-    func startRecording(saveAudioDirectory: String?, duration: NSTimeInterval) {
-        let audioURL: NSURL = recordAudio.getClipURL("recording")
-        filelabel.setTitle(audioURL.absoluteString, forState: .Normal)
-
+    func startRecording() {
+        
+        let audioURL = ViewController.getFileURL()
+        print(audioURL.absoluteString)
+        
+        let settings = [
+            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
+            AVSampleRateKey: 44100.0,
+            AVNumberOfChannelsKey: 1 as NSNumber,
+            AVEncoderAudioQualityKey: AVAudioQuality.High.rawValue
+        ]
+        
+        RecordBTN.setTitle("Stop", forState: .Normal)
+        
         do {
-            soundRecorder = try AVAudioRecorder(URL: audioURL, settings: self.recordSettings)
-            soundRecorder.delegate = self
-            soundRecorder.record()
+            whistleRecorder = try AVAudioRecorder(URL: audioURL, settings: settings)
+            whistleRecorder.delegate = self
+            whistleRecorder.record()
         } catch {
-
+            finishRecording(success: false)
         }
     }
-    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
-        //hello
+    
+    func finishRecording(success success: Bool) {
+        whistleRecorder.stop()
+        whistleRecorder = nil
+        
+        if success {
+            RecordBTN.setTitle("Tap to Re-record", forState: .Normal)
+        } else {
+            RecordBTN.setTitle("Tap to Record", forState: .Normal)
+        }
+    }
+    
+    func RecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
+        if !flag {
+            finishRecording(success: false)
+        }
+    }
+
+    @IBAction func Record(sender: UIButton) {
+        if whistleRecorder == nil {
+            startRecording()
+        } else {
+            finishRecording(success: true)
+        }
     }
 }
