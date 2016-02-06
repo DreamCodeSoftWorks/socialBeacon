@@ -25,7 +25,7 @@ class streamViewController: UIViewController {
 
     }
     @IBAction func recordButton(sender: AnyObject) {
-        
+        parseInt.stopChannelSounds()
     }
 
     required init(coder decoder: NSCoder) {

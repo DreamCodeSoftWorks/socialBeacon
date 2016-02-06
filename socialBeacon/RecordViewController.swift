@@ -9,21 +9,17 @@
 import UIKit
 import AVFoundation
 
-
 class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
-    
-    @IBOutlet var TimerLabel: UILabel!
+
     @IBOutlet var chirpLabel: UILabel!
     @IBOutlet var RecordBTN: UIButton!
     @IBOutlet var PlaybackBTN: UIButton!
-    @IBOutlet var ProgressBar: UIProgressView!
     @IBOutlet var UploadBTN: UIButton!
-    
+
     var recordingSession: AVAudioSession!
     var chirpRecorder: AVAudioRecorder!
     var chirpPlayer: AVAudioPlayer!
     var streamTitle: String?
-    var timer:NSTimer?
     
     let audioURL = RecordViewController.getFileURL()
     
@@ -33,9 +29,8 @@ class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         
         recordingSession = AVAudioSession.sharedInstance()
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector:Selector("setProgress"), userInfo: nil, repeats: true)
-        
         do {
+            // request recording permissions with the device
             try recordingSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
             try recordingSession.setActive(true)
             recordingSession.requestRecordPermission() { [unowned self] (allowed: Bool) -> Void in
@@ -52,23 +47,12 @@ class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         }
     }
     
-    func setProgress() {
-        if (chirpRecorder != nil) {
-            var seconds = (chirpRecorder?.currentTime)
-            var time=String(format: "%0.0f sec",seconds!)
-            TimerLabel.text = time
-            var progresscounter:Double=(chirpRecorder?.currentTime)!
-            ProgressBar.progress=Float(progresscounter/10)
-        } else {
-            TimerLabel.text = "0"
-            ProgressBar.progress = 0.0
-        }
-    }
-    
+    // Set the chirp-label to indicate that we're ready to record
     func loadRecordingUI() {
         chirpLabel.text = "Ready to chirp"
     }
     
+    // Indicate that we can't record with this device
     func loadFailUI() {
         chirpLabel.text = "An error has occurred :("
     }
@@ -79,12 +63,14 @@ class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
     }
     
 
+    // Get the directory to be used for storing temporary files
     class func getDocumentsDirectory() -> NSString {
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as [String]
         let documentsDirectory = paths[0]
         return documentsDirectory
     }
     
+    // Get the full path to be used for the 'chirp' temp file
     class func getFileURL() -> NSURL {
         let audioFilename = getDocumentsDirectory().stringByAppendingPathComponent("chirp.m4a")
         let audioURL = NSURL(fileURLWithPath: audioFilename)
@@ -92,9 +78,8 @@ class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         return audioURL
     }
     
+    // Start the recording process
     func startRecording() {
-        
-        //print(audioURL.absoluteString)
         
         let settings = [
             AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
@@ -114,6 +99,7 @@ class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         }
     }
     
+    // Indicate that we're done recording (they can re-record now)
     func finishRecording(success success: Bool) {
         
         chirpRecorder = nil
@@ -126,6 +112,8 @@ class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         }
     }
     
+    // Invoked when we're done recording, goes to 'finishRecording', which will display 
+    // the appropriate message to the user
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
         if !flag {
             finishRecording(success: false)
@@ -134,6 +122,7 @@ class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         }
     }
 
+    // Start the playback of the chirp (give them an opportunity to re-record)
     func startPlayback() {
         do {
             chirpPlayer = try AVAudioPlayer(contentsOfURL: audioURL)
@@ -145,6 +134,7 @@ class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         }
     }
     
+    // Playback finished
     func finishPlayback(success success: Bool) {
         chirpPlayer = nil
         if success {
@@ -154,6 +144,7 @@ class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         }
     }
     
+    // Indicate that the audio-player is done playing, output a message to the user
     func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
         if !flag {
             finishPlayback(success: false)
@@ -161,6 +152,8 @@ class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
             finishPlayback(success: true)
         }
     }
+    
+    // Actual interface to the user (record, playback, upload)
     
     @IBAction func Record(sender: UIButton) {
         if chirpRecorder == nil {

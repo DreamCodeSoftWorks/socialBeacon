@@ -216,18 +216,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xHF-M4-U0t">
-                                <rect key="frame" x="225" y="267" width="150" height="2"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="qLF-9T-2yI"/>
-                                </constraints>
-                            </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tho-Vu-K35">
-                                <rect key="frame" x="277" y="316" width="44" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyP-eh-weI">
                                 <rect key="frame" x="275" y="478" width="50" height="30"/>
                                 <constraints>
@@ -248,18 +236,12 @@
                             <constraint firstItem="Fxs-l8-D23" firstAttribute="top" secondItem="dcR-SO-sux" secondAttribute="bottom" constant="48" id="Jjz-73-xgg"/>
                             <constraint firstItem="nyP-eh-weI" firstAttribute="top" secondItem="Ct8-gG-rBA" secondAttribute="bottom" constant="15" id="P2c-Dy-aBm"/>
                             <constraint firstItem="dcR-SO-sux" firstAttribute="top" secondItem="aC2-yD-htd" secondAttribute="bottom" constant="69" id="ROD-gq-jtY"/>
-                            <constraint firstItem="xHF-M4-U0t" firstAttribute="centerX" secondItem="dcR-SO-sux" secondAttribute="centerX" id="VJI-mM-hbo"/>
-                            <constraint firstItem="Fxs-l8-D23" firstAttribute="top" secondItem="xHF-M4-U0t" secondAttribute="bottom" constant="28" id="cgK-6r-hKP"/>
-                            <constraint firstItem="nyP-eh-weI" firstAttribute="leading" secondItem="tho-Vu-K35" secondAttribute="leading" id="lfA-lX-ct7"/>
                             <constraint firstItem="inS-pL-j4P" firstAttribute="top" secondItem="nyP-eh-weI" secondAttribute="bottom" constant="97" id="se0-fA-qZE"/>
-                            <constraint firstItem="xHF-M4-U0t" firstAttribute="top" secondItem="dcR-SO-sux" secondAttribute="bottom" constant="35" id="wBO-rE-sGY"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="PlaybackBTN" destination="Ct8-gG-rBA" id="gdK-bn-4C7"/>
-                        <outlet property="ProgressBar" destination="EtP-gO-hfn" id="LGv-Fp-e7T"/>
                         <outlet property="RecordBTN" destination="Fxs-l8-D23" id="1od-Bz-R4h"/>
-                        <outlet property="Timer" destination="tho-Vu-K35" id="FjS-68-FYF"/>
                         <outlet property="UploadBTN" destination="nyP-eh-weI" id="kOw-7h-EB2"/>
                         <outlet property="chirpLabel" destination="dcR-SO-sux" id="PR7-kA-csf"/>
                     </connections>
