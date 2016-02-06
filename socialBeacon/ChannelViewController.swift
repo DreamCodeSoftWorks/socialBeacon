@@ -10,12 +10,16 @@ import UIKit
 
 class ChannelTableViewController: UITableViewController {
     
-    var channelArray = ["Super Bowl 50", "Democratic Debate", "Party Channel", "Local Channel"]
+    var channelArray: [String] = []
+    var selected = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        channelArray = ["Super Bowl 50", "Democratic Debate", "Party Channel", "Local Channel"]
+        
+        
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,7 +30,6 @@ class ChannelTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell!
         cell.textLabel?.text = channelArray[indexPath.row]
-        
         return cell
         
     }
@@ -35,16 +38,20 @@ class ChannelTableViewController: UITableViewController {
          return channelArray.count
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        selected = indexPath.row
+        performSegueWithIdentifier("channelSegue", sender: nil)
+    }
+    
 
     
-    /*
-    // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "channelSegue" {
+            if let dest = segue.destinationViewController as? streamViewController {
+                dest.streamTitle = channelArray[selected]
+            }
+        }
     }
-    */
 
 }
