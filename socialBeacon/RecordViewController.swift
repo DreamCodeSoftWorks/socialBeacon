@@ -12,7 +12,7 @@ import AVFoundation
 
 class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
     
-    @IBOutlet var Timer: UILabel!
+    @IBOutlet var TimerLabel: UILabel!
     @IBOutlet var chirpLabel: UILabel!
     @IBOutlet var RecordBTN: UIButton!
     @IBOutlet var PlaybackBTN: UIButton!
@@ -23,6 +23,7 @@ class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
     var chirpRecorder: AVAudioRecorder!
     var chirpPlayer: AVAudioPlayer!
     var streamTitle: String?
+    var timer:NSTimer?
     
     let audioURL = RecordViewController.getFileURL()
     
@@ -31,6 +32,8 @@ class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
         // Do any additional setup after loading the view, typically from a nib.
         
         recordingSession = AVAudioSession.sharedInstance()
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector:Selector("setProgress"), userInfo: nil, repeats: true)
         
         do {
             try recordingSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
@@ -46,6 +49,19 @@ class RecordViewController: UIViewController, AVAudioPlayerDelegate, AVAudioReco
             }
         } catch {
             self.loadFailUI()
+        }
+    }
+    
+    func setProgress() {
+        if (chirpRecorder != nil) {
+            var seconds = (chirpRecorder?.currentTime)
+            var time=String(format: "%0.0f sec",seconds!)
+            TimerLabel.text = time
+            var progresscounter:Double=(chirpRecorder?.currentTime)!
+            ProgressBar.progress=Float(progresscounter/10)
+        } else {
+            TimerLabel.text = "0"
+            ProgressBar.progress = 0.0
         }
     }
     
